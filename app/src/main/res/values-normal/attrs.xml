@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewWithFont">
+
+        <!-- a path to a font, relative to the assets directory -->
+        <attr name="fontFilePath" format="string" />
+
+        <attr name="type">
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="WaveStyle">
+
+        <attr name="wave_type" format="string" />
+
+    </declare-styleable>
+
+    <declare-styleable name="IconString">
+
+        <attr name="icon_type" format="string" />
+        <attr name="icon_color" format="string" />
+        <attr name="icon_size" format="string" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ShiningView">
+
+        <attr name="disableAnimation" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout_Layout">
+        <attr name="layout_space" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvGameRecord"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@drawable/d_white_corner"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp3"
+        android:paddingRight="@dimen/dp3"
+        android:text="Games"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

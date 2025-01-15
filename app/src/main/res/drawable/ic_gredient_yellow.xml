@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:startColor="#3C02BD"
+        android:centerColor="#7A03BA"
+        android:endColor="#3C02BD"
+        android:angle="90"
+        />
+
+    <corners
+        android:radius="@dimen/payu_dimen_25dp"
+        />
+    <stroke
+        android:width="2dp"
+        android:color="@color/new_yellow"
+        />
+
+</shape>

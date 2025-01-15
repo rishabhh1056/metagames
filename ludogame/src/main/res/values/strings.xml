@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MegaWinLudo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    <string name="banner_ad_unit_id">ca-app-pub-8980332164626988/3550028748</string>-->
+<!--    <string name="interetitianl_ad_unit_id">ca-app-pub-8980332164626988/5544022293</string>-->
+    <string name="banner_ad_unit_id">googlebannerid</string>
+    <string name="interetitianl_ad_unit_id">googleunitid</string>
+
+    <string name="facebook_app_id">3550228318350216</string>
+    <string name="fb_login_protocol_scheme">fb3550228318350216</string>
+<!--    <string name="default_web_client_id">749423252561-ak93977h7l53ooarnofa4tiecbf2eqhn.apps.googleusercontent.com</string>-->
+<!--    <string name="client_secret">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</string>-->
+
+</resources>

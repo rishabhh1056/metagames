@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:layout_alignLeft="@+id/rltParentView"
+        android:layout_alignRight="@+id/rltParentView"
+        android:layout_alignTop="@+id/rltParentView"
+        android:layout_alignBottom="@+id/rltParentView"
+
+        />
+
+        <LinearLayout
+            android:id="@+id/rltParentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp15"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingBottom="@dimen/dp20"
+            android:paddingRight="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp20"
+            >
+
+            <TextView
+                android:id="@+id/txtroomid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room 1"
+                android:layout_marginTop="@dimen/dp15"
+                android:textSize="@dimen/dimen_14dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/txtonline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19 Online"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/lghtAccent"
+                android:visibility="gone"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/lnrtable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/txtonline"
+                android:layout_marginTop="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Table Min:"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textColor="@color/lghtAccent"
+                        />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/gif_ruppe_"
+                        android:background="@drawable/black_transparent"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtmin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Table Max:"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textColor="@color/lghtAccent"
+                        />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/gif_ruppe_"
+                        android:background="@drawable/black_transparent"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtmax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/btnplay"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txtonline"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dimen_14dp"
+                android:textSize="@dimen/dimen_12dp"
+                android:layout_height="@dimen/dp20"
+                android:background="@drawable/btn_yellow_discard"
+                android:text="Play"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+               />
+
+
+        </LinearLayout>
+
+</RelativeLayout>

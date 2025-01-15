@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frame"
+        android:layout_alignLeft="@id/rltParentLayout"
+        android:layout_alignRight="@id/rltParentLayout"
+        android:layout_alignTop="@id/rltParentLayout"
+        android:layout_alignBottom="@id/rltParentLayout"
+        />
+    <RelativeLayout
+        android:id="@+id/rltParentLayout"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rel_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            >
+
+            <ImageView
+                android:id="@+id/imalucky"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/bulkchipsgreen" />
+
+            <LinearLayout
+                android:id="@+id/lnrheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imalucky"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp5"
+                >
+
+                <TextView
+                    android:id="@+id/txtproname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" 10Cr "
+                    android:lineSpacingExtra="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colordullwhite"
+                    android:textStyle="bold|italic"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvMaxCoins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" 10Cr "
+                    android:lineSpacingExtra="5dp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/colordullwhite"
+                    android:textStyle="bold|italic"
+                    android:textSize="20dp"
+                    android:visibility="gone"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnrheader"
+                android:layout_centerHorizontal="true"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/imgreward"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/imgbuy"
+                        android:layout_width="@dimen/payu_dimen_100dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:background="@drawable/ic_button"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Redeem"
+                        android:textColor="@color/Golder_yellow"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Day1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_22dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>

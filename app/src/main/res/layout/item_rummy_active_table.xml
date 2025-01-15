@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/lnrListingbg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/transpernt_purple"
+            android:elevation="2dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnrValue1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tvValue1"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvValue2"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvValue3"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tvValue4"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvValue5"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tvValue6"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tvValue7"
+                    style="@style/TableValueTextView"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="?dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/lnrValue8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tvValue8"
+                    android:layout_width="75dp"
+                    android:layout_height="@dimen/dp25"
+                    android:background="@color/new_yellow"
+                    android:text="@string/play_now"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

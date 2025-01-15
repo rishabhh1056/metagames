@@ -1,0 +1,3 @@
+rootProject.name='metagames'
+include ':app'
+include ':ludogame'

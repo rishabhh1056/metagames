@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rltMenuParent"
+    android:background="@drawable/d_menu_selected"
+    android:clickable="true"
+    >
+
+    <ImageView
+        android:id="@+id/ivSelected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@id/lnrparent"
+        android:layout_alignLeft="@id/lnrparent"
+        android:layout_alignTop="@id/lnrparent"
+        android:layout_alignBottom="@id/lnrparent"
+        />
+
+    <LinearLayout
+        android:id="@+id/lnrparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingRight="@dimen/dp15"
+        android:paddingLeft="@dimen/dp15"
+        >
+    <ImageView
+        android:id="@+id/ivMenuIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/tvRealmoney"
+        android:layout_marginRight="@dimen/dp10"
+        android:src="@drawable/ic_logout" />
+
+    <TextView
+        android:id="@+id/tvMenuText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRealmoney"
+        android:layout_toRightOf="@+id/ivRealmoneyicon"
+        android:text="KYC"
+        android:textColor="@color/subHeadingColor"
+        android:textSize="@dimen/sp17" />
+    </LinearLayout>
+
+</RelativeLayout>

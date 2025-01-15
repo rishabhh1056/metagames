@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:background="@drawable/transpernt_purple"
+            android:elevation="2dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnrValueBoot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tvBoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="0.3"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/table_text_size"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrValueMax"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvMinBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="15"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/table_text_size"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrValueChaal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvChaalLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="38.4"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/table_text_size"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrValuePot"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvPotLimi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="307.2"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/table_text_size"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrValuePlayer"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tvTotalPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="3955"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/table_text_size"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrValueJoin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tvPlaynow"
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:background="@color/new_yellow"
+                    android:text="Play now"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

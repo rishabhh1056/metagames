@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    style="@style/dialogParentStyle">
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        style="@style/popUpBoxbg"-->
+    <!--        android:layout_alignLeft="@id/lnr_box"-->
+    <!--        android:layout_alignRight="@id/lnr_box"-->
+    <!--        android:layout_alignTop="@id/lnr_box"-->
+    <!--        android:layout_alignBottom="@id/lnr_box"-->
+    <!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnr_box"
+        android:background="@drawable/d_pop_setting"
+        android:layout_marginHorizontal="25dp"
+        android:padding="20dp"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/lnrRuleslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp15"
+            android:paddingBottom="@dimen/dp20"
+            >
+
+            <TextView
+                android:id="@+id/how_to"
+                android:textColor="@color/white"
+                android:text="@string/how_to_play"
+                android:textAlignment="center"
+                android:textSize="0dp"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_below="@+id/how_to"
+                android:textColor="@color/white"
+                android:text="
+• 1-12,2-12,3-12  onboard wins then the bet amount x 3 times winner will get
+• 1-18-on board wins then bet amount x 2 times winner will get
+• Even on board wins then the bet amount x 2 times the winner will get
+• 2 to 1-on board wins then bet amount x 3 times winner will get
+• Odd on board wins then the bet amount x 2 times the winner will get
+• 19-36 on board wins then bet amount x2 times winner will get"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp50"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="invisible"
+                android:background="@drawable/ic_dt_rule1"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/dialog_toolbar"/>
+
+
+
+</RelativeLayout>

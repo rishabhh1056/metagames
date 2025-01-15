@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "270367642924",
+    "firebase_url": "https://firstplayergames-db213-default-rtdb.firebaseio.com",
+    "project_id": "firstplayergames-db213",
+    "storage_bucket": "firstplayergames-db213.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270367642924:android:dfa006ccd57eeee5078889",
+        "android_client_info": {
+          "package_name": "com.first_player_games"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270367642924-j6hromuv84smm2bepi2kp4bldm4d8htm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.first_player_games",
+            "certificate_hash": "485cd4d61ed520cce88337a6cd83c616152c3b49"
+          }
+        },
+        {
+          "client_id": "270367642924-a8q48k9032qe7oqgalpu0idv1g6u83ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADfY_T_3swUn_MeBIizIqy5eiqKMjJfl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270367642924-a8q48k9032qe7oqgalpu0idv1g6u83ha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    tools:context="._AdharBahar.AndharBahar_Home_A"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_bg"
+        android:scaleType="centerCrop"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rlt_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="visible"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:onClick="onBack"
+            android:src="@drawable/back" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rltimageptofile"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtproname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imaprofile"
+                android:text="Welcome Back "
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colordullwhite"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgicon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/black_transparent"
+                    android:src="@drawable/gif_ruppe_"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtwallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colordullwhite"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rltimageptofile"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/circle">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imaprofile"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/circle"
+                app:civ_border_color="@color/gold"
+                app:civ_border_width="1dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/app_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lnrtypegame"
+        android:layout_below="@+id/rlt_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/btnanderbahar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ANDAR BAHAR"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:textSize="12dp"
+            android:background="@color/black"/>
+        <Button
+            android:id="@+id/btnteenpatti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEEN PATTI"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp"
+            android:background="@color/black"/>
+        <Button
+            android:id="@+id/btnteenpatti20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEEN PATTI 20"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:textSize="12dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/black"/>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/home_container"
+        android:layout_below="@+id/lnrtypegame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btnav_bg"
+        android:elevation="4dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/lnrhistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/imghistory"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_histroy"
+                />
+
+            <TextView
+                android:id="@+id/txthistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textAllCaps="true"
+                android:layout_marginTop="3dp"
+                android:textSize="12dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lnrhome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            >
+
+            <ImageView
+                android:id="@+id/imggame"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_heart_card"
+                android:tint="@color/active_navcolor"
+                />
+
+            <TextView
+                android:id="@+id/txtgame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game"
+                android:textAllCaps="true"
+                android:textColor="@color/active_navcolor"
+                android:layout_marginTop="3dp"
+                android:textSize="12dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/home_profilecontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp" />
+
+</RelativeLayout>

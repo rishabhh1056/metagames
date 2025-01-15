@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource"
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:id="@+id/imgcard"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_hieght"
+        android:src="@drawable/backside_card"
+        android:elevation="10dp"
+        android:background="@drawable/shadow"
+        android:layout_marginRight="-12dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_jokercard"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_hieght"
+        android:layout_marginRight="-12dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_joker_card"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imgalphacard"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_hieght"
+        android:elevation="10dp"
+        android:src="@drawable/highlighted_cards"
+        android:visibility="gone"
+        android:layout_marginRight="-12dp"
+
+        />
+
+</RelativeLayout>

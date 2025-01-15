@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <ImageView
+        android:id="@+id/game_won_trophy"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/icon_trophy"
+        android:adjustViewBounds="true"
+        />
+    <TextView
+        android:id="@+id/gamewon_playername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red Won"
+        android:layout_centerInParent="true"
+        android:textSize="30dp"
+        android:fontFamily="@font/oswald"
+        android:gravity="center"
+        android:elegantTextHeight="true"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_shape"
+        android:backgroundTint="@color/purple4"
+        android:paddingHorizontal="50dp"
+        />
+    <Button
+        android:id="@+id/exitview"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="Exit"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background_green"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/mama_bear"
+        android:textSize="18dp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp"
+        android:gravity="center"
+        android:background="@drawable/alert_dialogue_background_3"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Your Refer ID is :"
+            android:fontFamily="@font/mama_bear"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/refer_id_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dice"
+                android:paddingVertical="9dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="REFER ID"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/share_id_button"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/start_button"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/button_backgrond"
+            android:text="Share"
+            android:fontFamily="@font/mama_bear"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:background="@drawable/play_local_written"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/yellow3"
+        android:text="Refer and Earn"
+        android:gravity="center"
+        android:textColor="@color/purple3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/oswald"
+        android:elegantTextHeight="true"
+        />
+</RelativeLayout>

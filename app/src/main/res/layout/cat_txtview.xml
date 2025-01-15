@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rltmainview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:id="@+id/ivChips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@id/txt_cat"
+            android:layout_alignLeft="@id/txt_cat"
+            android:layout_alignTop="@id/txt_cat"
+            android:layout_alignBottom="@id/txt_cat"
+            android:background="@drawable/ic_chip_1"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:id="@+id/txt_cat"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:minWidth="60dp"
+        android:minHeight="60dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_centerInParent="true"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:ellipsize="end"
+        android:shadowRadius="3"
+        android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+</RelativeLayout>

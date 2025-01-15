@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Androapps UPI Payment Gateway.</string>
+    <string name="go_to_payment_mobile_app">Go to Payment mobile app</string>
+    <string name="check_the_pending_requests_and_approve_payment_by_entering_upi_pin">Check the pending requests and approve payment by entering UPI PIN</string>
+    <string name="please_do_not_press_back_button_until_payment_is_complete">Please do not press back button until payment is complete</string>
+    <string name="use_step">STEP 1: Use below Details to send money:</string>
+
+</resources>

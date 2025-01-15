@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/lnrcarsList"
+            android:layout_alignTop="@id/lnrcarsList"
+            android:layout_alignRight="@id/lnrcarsList"
+            android:layout_alignBottom="@id/rltBetview"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_carroulate_bg"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/lnrcarsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp3"
+            android:paddingHorizontal="@dimen/dp50"
+            android:gravity="center"
+            >
+            <HorizontalScrollView
+                android:id="@+id/horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/lnrcancelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/item_carroulate_lastwin" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rltBetview"
+            android:layout_below="@+id/lnrcarsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/rec_rules"
+                android:layout_alignRight="@id/rec_rules"
+                android:layout_alignTop="@id/rec_rules"
+                android:layout_alignBottom="@id/rec_rules"
+                android:background="@drawable/ic_carroulate_betbg"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_rules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingRight="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_carroullete_type" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        style="@style/dialogParentStyle">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="@dimen/pop_up_top_margin"
+            style="@style/popUpBoxbg"
+            android:padding="20dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="220dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/dp15"
+                            android:background="@drawable/frame"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center">
+
+                                <RelativeLayout
+                                    android:id="@+id/rltrefer"
+                                    android:layout_width="150dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dimen_30dp"
+                                    android:background="@drawable/ic_button">
+
+                                    <TextView
+                                        android:id="@+id/txtReferalcode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="23423432"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/txtAnd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rltrefer"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:text="AND GET"
+                                    android:textColor="@color/colordullwhite"
+                                    android:textSize="@dimen/dp15"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/txtAnd"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="@dimen/dp15"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/day5" />
+
+                                    <TextView
+                                        android:id="@+id/tvInviteCoins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Rs.60"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/dimen_30dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/frame"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/txtyourfrind"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/dp20"
+                                    android:text="YOUR FRIEND WILL GET"
+                                    android:textColor="@color/colordullwhite"
+                                    android:textSize="15dp" />
+                                <TextView
+                                    android:id="@+id/txtFooter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtyourfrind"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="INVITE LIMIT 10 FRIENDS"
+                                    android:textColor="@color/colordullwhite"
+                                    android:textSize="10dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/lnrsocial"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/txtFooter"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    >
+
+                                    <ImageView
+                                        android:id="@+id/imgfb"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="15dp"
+                                        android:src="@drawable/facebook"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:id="@+id/imgwhats"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="15dp"
+                                        android:src="@drawable/whaatup"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:id="@+id/imgmail"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:src="@drawable/mailsocial"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lnrsocial"
+                                    android:gravity="center_horizontal"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="@dimen/dp15"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/day5" />
+
+                                    <TextView
+                                        android:id="@+id/txtchipsbelow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rs.60"
+                                        android:textColor="@color/white"
+                                        android:layout_gravity="center_vertical"
+                                        android:textSize="@dimen/dimen_30dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/lnrheader"
+                                    android:layout_centerHorizontal="true"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/imgbuy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="15dp"
+                                        android:src="@drawable/buychips"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/dialog_toolbar"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

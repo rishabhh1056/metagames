@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rtl_toolbar"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15">
+
+        <ImageView
+            android:id="@+id/imgclosetop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:src="@drawable/ic_close_new"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/img_diaProfile"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_gredient"
+            android:gravity="center"
+            android:src="@drawable/app_icon"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="How To Play"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

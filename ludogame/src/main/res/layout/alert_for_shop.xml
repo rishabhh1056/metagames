@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/alert_dialogue_background_3"
+    android:padding="20dp"
+    android:layout_marginHorizontal="40dp"
+    >
+    <TextView
+        android:id="@+id/alert_for_shop_message_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:fontFamily="@font/oswald"
+        android:text="You bought 10 Diamonds"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        />
+    <Button
+        android:id="@+id/shop_alert_okay_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="okay"
+        android:background="@drawable/button_background_green"
+        android:fontFamily="@font/mama_bear"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        />
+
+</LinearLayout>

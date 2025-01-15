@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="F:\AndroApps\Let&apos;s Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="F:\AndroApps\Let&apos;s Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\debug\jniLibs"/></dataSet></merger>

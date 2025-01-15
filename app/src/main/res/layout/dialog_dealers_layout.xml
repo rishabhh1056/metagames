@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/dialogParentStyle">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/popUpBoxbg"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:id="@+id/lnr_box"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_marginTop="@dimen/pop_up_top_margin"
+            android:layout_marginHorizontal="25dp"
+            android:padding="20dp"
+            >
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:id="@+id/lnrVertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_deler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+        </RelativeLayout>
+
+
+        <include
+            layout="@layout/dialog_toolbar"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

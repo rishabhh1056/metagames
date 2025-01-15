@@ -1,0 +1,77 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:2:1-49:12
+	package
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:4:5-42
+		INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:8:22-76
+application
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:10:5-47:19
+	android:supportsRtl
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:12:9-41
+	android:allowBackup
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:16:9-53
+	android:networkSecurityConfig
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:13:9-69
+	tools:replace
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:15:9-38
+	android:usesCleartextTraffic
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:17:9-44
+activity#com.example.sms_readpayment.CheckPaymentStatus
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:18:9-21:40
+	android:exported
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:21:13-37
+	android:theme
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:20:13-44
+	android:name
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:19:13-47
+activity#com.example.sms_readpayment.MainActivity
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:23:13-41
+activity#com.example.sms_readpayment.InitiatePayment
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:25:9-33:20
+	android:exported
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:26:13-44
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml:29:25-66
+uses-sdk
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+		ADDED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroApps\Let's Card (All in One)\Workspace\LetsacardAndroid\upiPay\src\main\AndroidManifest.xml

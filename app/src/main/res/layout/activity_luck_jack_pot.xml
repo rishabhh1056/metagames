@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:gravity="center"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="._LuckJackpot.LuckJackPot_A">
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivHelp"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_below="@+id/imgback"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:onClick="openGameRules"
+        android:src="@drawable/ic_jackpot_info"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/circle"
+        android:elevation="@dimen/dp10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_online_users" />
+
+        <TextView
+            android:id="@+id/tvonlineuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--// Also change from table image if changing-->
+        <ImageView
+            android:id="@+id/imgTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/rtlGameContainer"
+            android:layout_alignTop="@id/rtlGameContainer"
+            android:layout_alignRight="@id/rtlGameContainer"
+            android:layout_alignBottom="@id/rtlGameContainer"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_jackpot_box"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rtlGameContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@id/lnrtopviewcontainer"
+                        android:layout_alignTop="@id/lnrtopviewcontainer"
+                        android:layout_alignRight="@id/lnrtopviewcontainer"
+                        android:layout_alignBottom="@id/lnrtopviewcontainer"
+                        android:background="@drawable/ic_jackpot_topview" />
+
+                    <LinearLayout
+                        android:id="@+id/lnrtopviewcontainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dimen_15dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="@dimen/dimen_15dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignLeft="@id/lnrJackportamountparent"
+                                    android:layout_alignTop="@id/lnrJackportamountparent"
+                                    android:layout_alignRight="@id/lnrJackportamountparent"
+                                    android:layout_alignBottom="@id/lnrJackportamountparent"
+                                    android:background="@drawable/ic_jacktop_amount_box" />
+
+                                <LinearLayout
+                                    android:id="@+id/lnrJackportamountparent"
+                                    android:layout_width="@dimen/jack_pot_box_width"
+                                    android:layout_height="@dimen/jack_pot_box_height"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="20dp">
+
+                                        <TextView
+                                            style="@style/ShadowWhiteTextview"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginRight="@dimen/dp10"
+                                            android:text="JACKPOT"
+                                            android:textColor="@color/gold_color"
+                                            android:textSize="@dimen/jackpot_heading_size"
+                                            android:textStyle="bold" />
+
+                                        <ImageView
+                                            android:layout_width="@dimen/dp20"
+                                            android:layout_height="@dimen/dp20"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/dp10"
+                                            android:onClick="openJackpotHistory"
+                                            android:src="@drawable/ic_list" />
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvJackpottotalamount"
+                                        style="@style/ShadowWhiteTextview"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0000"
+                                        android:textColor="@color/gold_color"
+                                        android:textSize="25sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/ivCardbg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignLeft="@id/lnrJackportcardparent"
+                                    android:layout_alignTop="@id/lnrJackportcardparent"
+                                    android:layout_alignRight="@id/lnrJackportcardparent"
+                                    android:layout_alignBottom="@id/lnrJackportcardparent"
+                                    android:background="@drawable/ic_jackpot_cardsbg" />
+
+                                <LinearLayout
+                                    android:id="@+id/lnrJackportcardparent"
+                                    android:layout_width="@dimen/jack_pot_box_width"
+                                    android:layout_height="@dimen/jack_pot_box_height"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvStartTimer"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ivGadhi"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:shadowColor="@color/black"
+                                        android:shadowDx="1"
+                                        android:shadowDy="1"
+                                        android:shadowRadius="3"
+                                        android:text="0s"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/jackpot_heading_size" />
+
+                                    <LinearLayout
+                                        android:id="@+id/lnrGameCardsView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center_vertical|right"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/ivJackpotCard1"
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:src="@drawable/card_bg"
+                                                android:visibility="visible" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:gravity="center_horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/ivJackpotCard2"
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:layout_marginLeft="3dp"
+                                                android:layout_marginRight="3dp"
+                                                android:src="@drawable/card_bg" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toRightOf="@+id/rlt_centercard"
+                                            android:layout_weight="1">
+
+                                            <ImageView
+                                                android:id="@+id/ivJackpotCard3"
+                                                android:layout_width="80dp"
+                                                android:layout_height="80dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:src="@drawable/card_bg" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingTop="20dp"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/txtGameRunning"
+                                        style="@style/ShadowGoldTextviewNew"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:gravity="center"
+                                        android:text="Please wait for Next Round"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/txtcountdown"
+                                        style="@style/ShadowWhiteTextview"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/txtGameRunning"
+                                        android:layout_centerHorizontal="true"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="#EEC283"
+                                        android:textSize="20dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/txtGameBets"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/iv_bet_begin"
+                                        android:gravity="center"
+                                        android:textColor="#EEC283"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignLeft="@id/lnrJackportbigwinnerparent"
+                                    android:layout_alignTop="@id/lnrJackportbigwinnerparent"
+                                    android:layout_alignRight="@id/lnrJackportbigwinnerparent"
+                                    android:layout_alignBottom="@id/lnrJackportbigwinnerparent"
+                                    android:background="@drawable/ic_jacktop_amount_box" />
+
+                                <LinearLayout
+                                    android:id="@+id/lnrJackportbigwinnerparent"
+                                    android:layout_width="@dimen/jack_pot_box_width"
+                                    android:layout_height="@dimen/jack_pot_box_height"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:id="@+id/lnrparentWinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:onClick="openJackpotHistory">
+
+                                        <TextView
+                                            style="@style/ShadowWhiteTextview"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginRight="@dimen/dp10"
+                                            android:text="BIG WINNER"
+                                            android:textColor="@color/gold_color"
+                                            android:textSize="@dimen/jackpot_heading_size"
+                                            android:textStyle="bold" />
+
+                                        <ImageView
+                                            android:layout_width="@dimen/dp20"
+                                            android:layout_height="@dimen/dp20"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="@dimen/dp10"
+                                            android:onClick="openJackpotHistory"
+                                            android:src="@drawable/ic_history" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rltplayer1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true">
+
+                                        <RelativeLayout
+                                            android:id="@+id/rltcirclproimage1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:id="@+id/imgpl1glow"
+                                                android:layout_width="@dimen/Player1_width"
+                                                android:layout_height="@dimen/Player1_height"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/glow_circle"
+                                                android:visibility="gone" />
+
+                                            <de.hdodenhof.circleimageview.CircleImageView
+                                                android:id="@+id/ivWinnerImage"
+                                                android:layout_width="@dimen/Player1_circle_width"
+                                                android:layout_height="@dimen/Player2_circle_height"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/avatar"
+                                                android:visibility="visible" />
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_toRightOf="@+id/rltcirclproimage1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/txtName"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:gravity="center"
+                                                android:shadowColor="@color/black"
+                                                android:shadowDx="1"
+                                                android:shadowDy="1"
+                                                android:shadowRadius="3"
+                                                android:text=""
+                                                android:textColor="@color/white"
+                                                android:textSize="13dp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/txt_gameId"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:gravity="center"
+                                                android:shadowColor="@color/black"
+                                                android:shadowDx="1"
+                                                android:shadowDy="1"
+                                                android:shadowRadius="3"
+                                                android:text=""
+                                                android:textSize="13dp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignLeft="@id/horizontal"
+                                android:layout_alignTop="@id/horizontal"
+                                android:layout_alignRight="@id/ivMorewins"
+                                android:layout_alignBottom="@id/horizontal"
+                                android:background="@drawable/ic_jackpot_change_strip" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/ivMorewins"
+                                android:fillViewport="true"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="3dp"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:id="@+id/lnrcancelist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <include layout="@layout/item_lastbet" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+
+                            <ImageView
+                                android:id="@+id/ivMorewins"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/btn_oragen_drop"
+                                android:onClick="openJackpotLasrWinHistory"
+                                android:padding="@dimen/dp7"
+                                android:src="@drawable/ic_arrow_zigzag" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lnrtopviewcontainer"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen_15dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="@dimen/dimen_15dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_rules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_jackpot_setamount" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="-25dp"
+                                android:layout_marginRight="-20dp"
+                                android:layout_toLeftOf="@+id/iv_add"
+                                android:layout_toRightOf="@+id/imgicon"
+                                android:background="@drawable/ic_corner_strip"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/imgicon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_currency_chip"
+                                android:visibility="visible" />
+
+                            <EditText
+                                android:id="@+id/txtBallence"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toRightOf="@+id/imgicon"
+                                android:background="@null"
+                                android:cursorVisible="false"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:minWidth="60dp"
+                                android:text="0"
+                                android:textColor="@color/colordullwhite"
+                                android:textSize="16sp"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/iv_add"
+                                android:layout_width="45dp"
+                                android:layout_height="24dp"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_toRightOf="@+id/txtBallence"
+                                android:background="@drawable/iv_jackpot_add" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgpl1minus"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/minusnew"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentRight="true">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignLeft="@id/btGameAmount"
+                                        android:layout_alignTop="@id/btGameAmount"
+                                        android:layout_alignRight="@id/btGameAmount"
+                                        android:layout_alignBottom="@id/btGameAmount"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/textboxchal" />
+
+                                    <Button
+                                        android:id="@+id/btGameAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="50"
+                                        android:textColor="#00BAB0"
+                                        android:textSize="12dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/imgpl1plus"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:src="@drawable/addnew"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <!--                        <ImageView-->
+                        <!--                            android:layout_width="@dimen/dimen_40dp"-->
+                        <!--                            android:layout_height="@dimen/dimen_40dp"-->
+                        <!--                            android:layout_gravity="center"-->
+                        <!--                            android:layout_marginLeft="@dimen/dp5"-->
+                        <!--                            android:layout_marginRight="@dimen/dimen_10dp"-->
+                        <!--                            android:onClick="openGameRules"-->
+                        <!--                            android:src="@drawable/ic_jackpot_info"-->
+                        <!--                            android:visibility="visible" />-->
+
+                        <HorizontalScrollView
+                            android:id="@+id/scrollView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|bottom"
+                            android:gravity="left|bottom"
+                            android:orientation="horizontal"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:id="@+id/lnrfollow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"></LinearLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ChipstoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/txtBallence"
+                android:layout_alignTop="@id/txtBallence"
+                android:layout_alignRight="@id/txtBallence"
+                android:layout_alignBottom="@id/txtBallence"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_dt_user_conis" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="2dp"
+                android:gravity="center_vertical"
+                android:minWidth="150dp"
+                android:paddingLeft="45dp"
+                android:text="0"
+                android:textColor="@color/gold_color"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sticker_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rltwinnersymble1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ivWine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/winner_patti"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:gravity="center"
+                android:text="You Win"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                app:layout_constraintBottom_toBottomOf="@+id/ivWine"
+                app:layout_constraintEnd_toEndOf="@+id/ivWine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivWine" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/rtllosesymble1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ivlose"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_game_over"
+                android:tint="@color/red"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvlose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:gravity="center"
+                android:text="You lose"
+                android:textColor="@color/BrownColor"
+                android:textSize="20sp"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                app:layout_constraintBottom_toBottomOf="@+id/ivlose"
+                app:layout_constraintEnd_toEndOf="@+id/ivlose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivlose" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltOngoinGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/ShadowGoldTextviewNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Please wait for Next Round"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

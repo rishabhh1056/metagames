@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.first_player_games.MainActivity"
+    android:clipToPadding="false"
+    >
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/background_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        />
+
+    <Button
+        android:id="@+id/login_signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_background_long"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="Login / Signup"
+        android:fontFamily="@font/mama_bear"
+        android:textSize="20dp"
+        android:elevation="10dp"
+        android:onClick="loginSignupButton"
+        android:clickable="false"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        />
+
+
+
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/mainoprinignlogo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/ludo_written"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:adjustViewBounds="true"-->
+
+<!--        />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/yonoj_written"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/mainoprinignlogo"-->
+<!--        app:tint="@color/white" />-->
+
+    <ImageView
+        android:id="@+id/mainoprinignlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/new_logo_stars"
+        android:padding="100dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

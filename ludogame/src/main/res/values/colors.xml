@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">@color/background_blue</color>
+
+    <color name="white">#ffffff</color>
+    <color name="red">#ED1C24</color>
+
+
+
+    <color name="profile_border">#FFC107</color>
+    <color name="profile_text">#572500</color>
+    <color name="windows_backgroind_1">#515959</color>
+    <color name="stroke_color">#000000</color>
+    <color name="background_blue">#2E3192</color>
+    <color name="purple">#662D91</color>
+
+    <color name="purple3">#392C44</color>
+    <color name="purple4">#8C386D</color>
+    <color name="yellow_4">#8E5416</color>
+
+
+    <color name="red1">#FF4D4D</color>
+    <color name="red2">#FF6161</color>
+    <color name="red3">#FF7070</color>
+
+    <color name="gree1">#2DB02D</color>
+    <color name="gree2">#47BF47</color>
+    <color name="gree3">#58CC58</color>
+
+    <color name="blue1">#66CCFF</color>
+    <color name="blue2">#91DBFF</color>
+    <color name="blue3">#A1E0FF</color>
+
+    <color name="yellow1">#FFCC00</color>
+    <color name="yellow2">#FFDC4F</color>
+    <color name="yellow3">#FFE062</color>
+
+
+    <color name="red9">#E91D24</color>
+    <color name="yellow9">#FEDD17</color>
+    <color name="green9">#00A248</color>
+    <color name="blue9">#25A2EF</color>
+
+    <color name="table_list_color">#AA4878</color>
+    <color name="table_background_color">#4E0027</color>
+
+    <color name="pop_setting_stroke">#890044</color>
+    <color name="strip_setting_bg">#0C2840</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="text_color_primary">#609b95</color>
+    <color name="orange">#EEC283</color>
+    <color name="gray_line">#D6D6D6</color>
+
+</resources>

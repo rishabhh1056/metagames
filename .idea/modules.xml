@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/metagames.iml" filepath="$PROJECT_DIR$/.idea/modules/metagames.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/metagames.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/metagames.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/metagames.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/metagames.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/metagames.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/metagames.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/metagames.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/metagames.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.iml" filepath="$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/ludogame/metagames.ludogame.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/lnrparent"
+        android:layout_alignTop="@+id/lnrparent"
+        android:layout_alignRight="@+id/lnrparent"
+        android:layout_alignBottom="@+id/lnrparent"
+        android:background="@drawable/ic_purple_strock" />
+
+
+    <LinearLayout
+        android:id="@+id/lnrparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingRight="@dimen/dp15"
+        android:paddingLeft="@dimen/dp15"
+        android:gravity="center"
+        android:layout_margin="@dimen/dp10"
+        >
+
+        <TextView
+            android:id="@+id/tvTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Time: "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="50"
+            android:textSize="16sp"
+            style="@style/ShadowGoldTextviewNew"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

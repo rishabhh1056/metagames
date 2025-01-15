@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/popUpBoxbg"
+        android:layout_alignRight="@id/lnrRaiseParent"
+        android:layout_alignLeft="@id/lnrRaiseParent"
+        android:layout_alignTop="@id/lnrRaiseParent"
+        android:layout_alignBottom="@id/lnrRaiseParent"
+        />
+
+    <LinearLayout
+        android:id="@+id/lnrRaiseParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp50"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raise Amount"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?dividerVertical"
+            android:layout_marginBottom="@dimen/dp10"
+            />
+
+        <LinearLayout
+            android:id="@+id/btnAllin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dp15"
+            >
+        <TextView
+            style="@style/packageRaiseButtonStyle"
+            android:text="ALL IN"
+            />
+
+        <TextView
+            style="@style/packageRaisePriceButtonStyle"
+            android:text=""
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnFullPot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dp15"
+            >
+            <TextView
+                style="@style/packageRaiseButtonStyle"
+                android:text="Full POT"
+                />
+
+            <TextView
+                style="@style/packageRaisePriceButtonStyle"
+                android:text=""
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnHalfpot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/packageRaiseButtonStyle"
+                android:text="Half POT"
+                />
+
+            <TextView
+                style="@style/packageRaisePriceButtonStyle"
+                android:text=""
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

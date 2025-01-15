@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.PaymentScreen.Payment_A">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/toolbr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/bt_menu"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="20dp"
+                        android:tint="@android:color/white"
+                        app:srcCompat="@drawable/ic_back_arrow" />
+
+                    <TextView
+                        android:id="@+id/toolbr_lbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="@string/app_name"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:text="@string/upload"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".Activity.AllPaymentActivity">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/lyTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/colorPrimary"
+                        android:minHeight="50dp"
+                        android:orientation="vertical"
+                        android:paddingStart="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:letterSpacing="0.1"
+                            android:text="Recharge Amount"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtPayableAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:letterSpacing="0.1"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <!--Main Content-->
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/lyTop"
+                        android:fillViewport="true">
+
+                        <!--Details-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/pay_card_margin_start_end"
+                                android:layout_marginEnd="@dimen/pay_card_margin_start_end"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/payment_methods"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:listitem="@layout/item_payment"
+                                    tools:itemCount="1"
+                                    />
+                            </LinearLayout>
+
+                            <!--Wallet Balance-->
+
+                            <!--Heading-->
+
+                            <!--Payment GateWays-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/pay_card_margin_start_end"
+                                android:layout_marginEnd="@dimen/pay_card_margin_start_end"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/payment_methods"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+
+                                <!--lyPhonePay-->
+                                <LinearLayout
+                                    android:id="@+id/lyPhonePay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/d_background_border_gray"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.55"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:layout_width="130dp"
+                                                android:layout_height="30dp"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/ic_payment_phonepe" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.35"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:id="@+id/tvMobile"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:textColor="@color/text_color_primary"
+                                                android:textSize="@dimen/pay_sub_topic" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.1"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:layout_width="18dp"
+                                                android:layout_height="22dp"
+                                                android:background="@drawable/right_arrow" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lyPaytm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/d_background_border_gray"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.55"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:layout_width="130dp"
+                                                android:layout_height="50dp"
+                                                android:src="@drawable/ic_payment_paytm" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.35"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:id="@+id/tvMobile_2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:textColor="@color/text_color_primary"
+                                                android:textSize="@dimen/pay_sub_topic" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.1"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:layout_width="18dp"
+                                                android:layout_height="22dp"
+                                                android:background="@drawable/right_arrow" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lyGpay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/d_background_border_gray"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.55"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:layout_width="130dp"
+                                                android:layout_height="30dp"
+                                                android:padding="40dp"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/ic_payment_new_gpat" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.35"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:id="@+id/tvMobile_3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:textColor="@color/text_color_primary"
+                                                android:textSize="@dimen/pay_sub_topic" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.1"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:layout_width="18dp"
+                                                android:layout_height="22dp"
+                                                android:background="@drawable/right_arrow" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lyPaypal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/d_background_border_gray"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.55"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:layout_width="130dp"
+                                                android:layout_height="30dp"
+                                                android:padding="40dp"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/ic_payment_paypal_logo" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.35"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:id="@+id/tvMobile_4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:textColor="@color/text_color_primary"
+                                                android:textSize="@dimen/pay_sub_topic" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.1"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:layout_width="18dp"
+                                                android:layout_height="22dp"
+                                                android:background="@drawable/right_arrow" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lyamazon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/d_background_border_gray"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.55"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:layout_width="130dp"
+                                                android:layout_height="30dp"
+                                                android:padding="40dp"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/ic_payment_amzon_pay" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.35"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:id="@+id/tvMobile_5"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:textColor="@color/text_color_primary"
+                                                android:textSize="@dimen/pay_sub_topic" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.1"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:layout_width="18dp"
+                                                android:layout_height="22dp"
+                                                android:background="@drawable/right_arrow" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lyjio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/d_background_border_gray"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="12dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.55"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:layout_width="130dp"
+                                                android:layout_height="30dp"
+                                                android:padding="40dp"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/ic_payment_jio_money" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.35"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:id="@+id/tvMobile_6"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:textColor="@color/text_color_primary"
+                                                android:textSize="@dimen/pay_sub_topic" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.1"
+                                            android:gravity="center|end">
+
+                                            <TextView
+                                                android:layout_width="18dp"
+                                                android:layout_height="22dp"
+                                                android:background="@drawable/right_arrow" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="12dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/background_border"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center_horizontal"
+                                    android:text="Important"
+                                    android:textColor="@color/orange"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:text="@string/imp_note"
+                                    android:textColor="@color/orange"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="@string/imp_note_2"
+                                    android:textColor="@color/orange"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

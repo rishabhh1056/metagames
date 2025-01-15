@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_carroulate_list_bg"
+            android:paddingTop="@dimen/dp5">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_carroulatte_speedometer" />
+
+            <RelativeLayout
+                android:id="@+id/rltaudi4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/rltPorche"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection16"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_car_circle_audi" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltPorche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/carroulateRighGap"
+                android:layout_toLeftOf="@+id/rltfari"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection17"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_porche" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltfari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/carroulateRighGap"
+                android:layout_toLeftOf="@+id/rltLuck"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/ivSelection18"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_ferrari" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltLuck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/carroulateRighGap"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivSelection1"
+                    style="@style/carRoulateIconSelectionStyle"
+                    android:src="@drawable/ic_carroulate_selectedbg"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_lucky" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltbmw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:layout_toRightOf="@+id/rltLuck"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection2"
+                    style="@style/carRoulateIconSelectionStyle"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_bmw" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltManidra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:layout_toRightOf="@+id/rltbmw"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection3"
+                    style="@style/carRoulateIconSelectionStyle"
+                    android:src="@drawable/ic_carroulate_selectedbg"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_mahindra" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltaudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:layout_toRightOf="@+id/rltManidra"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection4"
+                    style="@style/carRoulateIconSelectionStyle"
+                    android:src="@drawable/ic_carroulate_selectedbg"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_audi" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltMercedes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltaudi"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/carroulteTopGap"
+                android:layout_toRightOf="@+id/imageView2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection5"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_mercedez" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltTata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltMercedes"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/carroulteTopGap"
+                android:layout_toRightOf="@+id/imageView2">
+
+                <ImageView
+                    android:id="@+id/ivSelection6"
+                    style="@style/carRoulateIconSelectionStyle"
+                    android:visibility="gone" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_tata" />
+
+
+            </RelativeLayout>
+            <!--            Bottom Viw-->
+            <RelativeLayout
+                android:id="@+id/rltMercedes3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltPorche"
+                android:layout_marginTop="@dimen/carroulteTopGap"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection15"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_mercedez" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltTata2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rltMercedes3"
+                android:layout_marginTop="@dimen/carroulteTopGap"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/imageView2">
+
+                <ImageView
+                    android:id="@+id/ivSelection14"
+                    style="@style/carRoulateIconSelectionStyle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_tata" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltaudi3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_toLeftOf="@id/rltPorche2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection13"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_audi" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltPorche2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginLeft="@dimen/carroulateRighGap"
+                android:layout_toLeftOf="@+id/rltfari2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection12"
+                    style="@style/carRoulateIconSelectionStyle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_porche" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltfari2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginLeft="@dimen/carroulateRighGap"
+                android:layout_toLeftOf="@+id/rltLamborghini2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection11"
+                    style="@style/carRoulateIconSelectionStyle"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_ferrari" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltLamborghini2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/carroulateRighGap"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivSelection10"
+                    style="@style/carRoulateIconSelectionStyle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_lamborghiani" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltbmw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:layout_toRightOf="@+id/rltLamborghini2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection9"
+                    style="@style/carRoulateIconSelectionStyle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_bmw" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltManidra2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:layout_toRightOf="@+id/rltbmw2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection8"
+                    style="@style/carRoulateIconSelectionStyle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_mahindra" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltaudi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginRight="@dimen/carroulateRighGap"
+                android:layout_toRightOf="@+id/rltManidra"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSelection7"
+                    style="@style/carRoulateIconSelectionStyle" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    style="@style/carRoulateIconStyle"
+                    android:src="@drawable/ic_car_circle_audi" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

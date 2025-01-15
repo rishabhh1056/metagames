@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_toLeftOf="@+id/lnrParentContainer"
+        android:background="@color/darkRedColor"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingRight="5dp"
+        android:rotation="90"
+        android:src="@drawable/ic_arrow_down_circle"
+        android:layout_marginRight="-2dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_menu"
+        android:layout_alignRight="@id/lnrParentContainer"
+        android:layout_alignLeft="@id/lnrParentContainer"
+        android:layout_alignTop="@id/lnrParentContainer"
+        android:layout_alignBottom="@id/lnrParentContainer"
+        />
+    <RelativeLayout
+        android:id="@+id/lnrParentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:layout_marginTop="-5dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivHeading"
+            android:layout_width="70dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:src="@drawable/ic_menu_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ivHeading"
+            tools:listitem="@layout/item_menu" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

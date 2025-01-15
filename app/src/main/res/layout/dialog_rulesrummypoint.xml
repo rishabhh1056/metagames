@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/dialogParentStyle">
+
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/popUpBoxbg"
+    android:layout_alignLeft="@id/lnr_box"
+    android:layout_alignRight="@id/lnr_box"
+    android:layout_alignTop="@id/lnr_box"
+    android:layout_alignBottom="@id/lnr_box"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnr_box"
+        android:layout_below="@+id/rtl_toolbar"
+        android:layout_marginTop="@dimen/pop_up_top_margin"
+        android:layout_marginHorizontal="25dp"
+        android:padding="20dp"
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/dp20"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnrRuleslist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp20"
+                android:paddingBottom="@dimen/dp20"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/ic_rummy_rule1"
+                    />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+    <include
+        layout="@layout/dialog_toolbar"/>
+
+
+</RelativeLayout>

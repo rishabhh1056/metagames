@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.first_player_games">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".LudoApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8980332164626988~3258384704" />
+<!--        <meta-data-->
+<!--            android:name="com.facebook.sdk.ApplicationId"-->
+<!--            android:value="3550228318350216" />-->
+        <activity android:name="com.first_player_games.OnlineGame.Lobby.TournamentActivity" />
+
+        <activity
+            android:name="com.first_player_games.OnlineGame.OnlineGame_V2.OnlineGame_V2"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            />
+        <activity
+            android:name="com.first_player_games.OnlineGame.Lobby.RoomJoinActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+        <activity
+            android:name="com.first_player_games.OnlineGame.Lobby.RoomCreationActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity
+            android:name="com.first_player_games.LocalGame.VsComputer"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+        <activity
+            android:name="com.first_player_games.LocalGame.LocalGame"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+        <activity
+            android:name="com.first_player_games.Home_Activity"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            />
+
+    </application>
+
+</manifest>

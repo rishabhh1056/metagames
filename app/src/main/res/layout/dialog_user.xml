@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rltDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            style="@style/popUpBoxbgProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/lnrProfileDetails"
+            android:layout_alignTop="@id/lnrProfileDetails"
+            android:layout_alignRight="@id/lnrProfileDetails"
+            android:layout_alignBottom="@id/lnrProfileDetails" />
+
+        <RelativeLayout
+            android:id="@+id/lnrProfileDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/rlt_profile"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="40dp">
+
+            <LinearLayout
+                android:id="@+id/img_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp20"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEditProfile"
+                    style="@style/ShadowGoldTextview"
+                    android:text="Profile"
+                    android:paddingLeft="@dimen/dp10"
+                    android:background="@drawable/white_lable_small"
+                    android:textSize="@dimen/sp17" />
+
+                <TextView
+                    style="@style/ShadowGoldTextview"
+                    android:text="|"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_bank"
+                    style="@style/ShadowGoldTextview"
+                    android:text="Bank Details"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="@dimen/sp17" />
+                <TextView
+                    style="@style/ShadowGoldTextview"
+                    android:text="|"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvKYC"
+                    style="@style/ShadowGoldTextview"
+                    android:text="KYC"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="@dimen/sp17" />
+                <TextView
+                    style="@style/ShadowGoldTextview"
+                    android:text="|"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tv_password"
+                    style="@style/ShadowGoldTextview"
+                    android:text="Update Password"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="@dimen/sp17" />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_edit_black_24dp" />
+            </LinearLayout>
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_edit">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp20"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnr_userinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout style="@style/profileFieldParent">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled1"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Name:" />
+
+                                <TextView
+                                    android:id="@+id/txt_diaName"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/profileFieldParent"
+                                android:background="@null">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled2"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Mobile no:" />
+
+                                <TextView
+                                    android:id="@+id/txt_diaPhone"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout style="@style/profileFieldParent">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled3"
+                                    style="@style/profileFieldTextView"
+                                    android:text="UPI ID:" />
+
+                                <TextView
+                                    android:id="@+id/txt_upi"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/profileFieldParent"
+                                android:background="@null">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled4"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Bank Details:" />
+
+                                <TextView
+                                    android:id="@+id/txt_bank"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/profileFieldParent"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled5"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Aadhar card no:" />
+
+                                <TextView
+                                    android:id="@+id/txt_adhar"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_updateuser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="User Name:"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/Golder_yellow"
+                                android:layout_width="match_parent"
+                                android:paddingLeft="@dimen/dp5"
+                                android:textAllCaps="false"
+                                android:layout_marginLeft="@dimen/dp30"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tv_upi"
+                                android:text="UPI:"
+                                android:textColor="@color/Golder_yellow"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:layout_width="match_parent"
+                                android:paddingLeft="@dimen/dp5"
+                                android:layout_marginLeft="180dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edtUsername"
+                                android:inputType="text"
+                                android:layout_width="250dp"
+                                android:layout_height="@dimen/dp35"
+                                style="@style/EditTextWithBackground_new"
+                                android:hint="Enter User Name" />
+
+                            <EditText
+                                android:id="@+id/edtUserupi"
+                                style="@style/EditTextWithBackground_new"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="250dp"
+                                android:layout_height="@dimen/dp35"
+                                android:text="UPI:"
+                                android:hint="Enter UPI" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_3"
+                                android:text="Bank Details:"
+                                android:textColor="@color/Golder_yellow"
+                                android:layout_width="match_parent"
+                                android:paddingLeft="@dimen/dp5"
+                                android:layout_gravity="center_vertical"
+                                android:textAllCaps="false"
+                                android:layout_marginLeft="@dimen/dp30"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/tv_4"
+                                android:text="Aadhar Details:"
+                                android:textColor="@color/Golder_yellow"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:layout_width="match_parent"
+                                android:paddingLeft="@dimen/dp5"
+                                android:layout_marginLeft="145dp"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edtUserbank"
+                                android:text="Bank Details:"
+                                android:inputType="text"
+                                android:layout_width="250dp"
+                                android:hint="Enter Bank Details"
+                                android:layout_height="@dimen/dp35"
+                                style="@style/EditTextWithBackground_new" />
+
+                            <EditText
+                                android:id="@+id/edtUseradhar"
+                                style="@style/EditTextWithBackground_new"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="250dp"
+                                android:text=""
+                                android:layout_height="@dimen/dp35"
+                                android:hint="Enter Adahar card" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/dp8"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_mobile"
+                                android:text="Phone Details:"
+                                android:textColor="@color/Golder_yellow"
+                                android:layout_width="match_parent"
+                                android:paddingLeft="@dimen/dp5"
+                                android:textAllCaps="false"
+                                android:layout_marginLeft="@dimen/dp30"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_mobile"
+                                android:enabled="false"
+                                android:editable="false"
+                                android:layout_width="250dp"
+                                android:layout_height="@dimen/dp35"
+                                android:focusableInTouchMode="false"
+                                style="@style/EditTextWithBackground_new"
+                                android:hint="Enter Phone No."
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/imgsub"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:src="@drawable/update" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <ImageView
+                android:id="@+id/imgclosetop"
+                style="@style/closeButton"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="0dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlt_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/img_diaProfile"
+                android:layout_alignTop="@id/img_diaProfile"
+                android:layout_alignRight="@id/img_diaProfile"
+                android:layout_alignBottom="@id/img_diaProfile"
+                android:src="@drawable/user_bg_circle" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_diaProfile"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/app_icon" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="-15dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/img_diaProfile"
+                android:src="@drawable/ic_baseline_camera" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

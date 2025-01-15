@@ -1,0 +1,99 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:2:1-44:12
+	package
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:4:5-42
+		INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+		INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:6:5-70
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:6:22-67
+uses-permission#android.permission.INTERNET
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:8:22-76
+application
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:10:5-42:19
+	android:supportsRtl
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:15:9-54
+	android:icon
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:18:9-53
+	android:networkSecurityConfig
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:14:9-69
+	tools:replace
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:17:9-38
+	android:usesCleartextTraffic
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:19:9-44
+activity#com.example.sms_readpayment.CheckPaymentStatus
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:20:9-23:40
+	android:exported
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:23:13-37
+	android:theme
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:22:13-44
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:21:13-47
+activity#com.example.sms_readpayment.MainActivity
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:24:9-26:40
+	android:exported
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:25:13-41
+activity#com.example.sms_readpayment.InitiatePayment
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:27:9-33:20
+	android:exported
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:29:13-36
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:28:13-44
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:30:13-32:29
+action#android.intent.action.MAIN
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:31:25-66
+receiver#com.example.sms_readpayment.SmsListener
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:35:9-41:20
+	android:exported
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:37:13-36
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:36:13-40
+intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:38:13-40:29
+	android:priority
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:38:28-51
+action#android.provider.Telephony.SMS_RECEIVED
+ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:39:17-82
+	android:name
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml:39:25-79
+uses-sdk
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+		INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+		ADDED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml
+		INJECTED from C:\AsifFilese\Android-Project\CardsGames\1DemoGames\LetsCard\LetsPlayCard\upiPayment\src\main\AndroidManifest.xml

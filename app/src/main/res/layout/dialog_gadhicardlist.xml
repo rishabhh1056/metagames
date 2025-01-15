@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/home_bg"
+        android:scaleType="center"
+        android:layout_alignRight="@id/recUsercardlist"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recUsercardlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        tools:listitem="@layout/item_gadhi_card"
+        android:layout_marginTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp40"
+        android:layout_above="@+id/btnconfirm"
+        />
+
+    <Button
+        android:id="@+id/btnconfirm"
+        android:layout_alignRight="@id/recUsercardlist"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@color/green"
+        android:layout_centerHorizontal="true"
+        android:text="CONFIRM"
+        android:visibility="gone"
+        />
+    </RelativeLayout>
+</RelativeLayout>

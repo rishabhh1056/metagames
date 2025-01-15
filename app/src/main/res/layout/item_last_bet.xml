@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/ivlastwinbg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@id/tvItems"
+        android:layout_alignRight="@id/tvItems"
+        android:layout_alignBottom="@id/tvItems"
+        android:layout_alignTop="@id/tvItems"
+        android:background="@drawable/ic_jackpot_strip_green"
+        />
+    <TextView
+        android:id="@+id/tvItems"
+        style="@style/ShadowWhiteTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:paddingRight="@dimen/dp5"
+        android:paddingLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="High"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:gravity="center"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="._SevenUpGames.SevenUp_A">
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back"
+        android:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/img_help"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_toRightOf="@+id/imgback"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp7"
+        android:onClick="openGameRules"
+        android:src="@drawable/ic_jackpot_info"
+        android:visibility="visible" />
+    <LinearLayout
+        android:id="@+id/lnrOnlineUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp60"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="@dimen/dp10"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/ic_online_user"
+            />
+
+        <TextView
+            android:id="@+id/tvonlineuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            style="@style/ShadowWhiteTextview"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--// Also change from table image if changing-->
+        <RelativeLayout
+            android:id="@+id/rlt_cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rtlAmpire"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/dp95"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ChipstoDealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/girl_char_seven"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/rltGameDetails"
+            android:layout_alignTop="@id/rltGameDetails"
+            android:layout_alignRight="@id/rltGameDetails"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp50"
+            android:background="@drawable/ic_sevenup_table" />
+
+        <ImageView
+            android:id="@+id/ivCardGadhi"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignRight="@id/imgTable"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/ic_card_gadhi"
+            android:visibility="gone"
+            />
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/watch"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/txtcountdown"
+                style="@style/ShadowWhiteTextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center"
+                android:text=""
+                android:layout_centerInParent="true"
+                android:textColor="#EEC283"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvStartTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:shadowColor="#5d5534"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:text="0"
+                android:textColor="#5d5534"
+                android:textSize="@dimen/dp20"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <!--  Players Layout START -->
+        <LinearLayout
+            android:id="@+id/rltGameDetails"
+            android:layout_width="547dp"
+            android:layout_height="320dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <!--game score-->
+            <RelativeLayout
+                android:id="@+id/rltlastwins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/payu_dimen_120dp"
+                android:layout_marginTop="@dimen/dp60">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@id/horizontal"
+                    android:layout_alignTop="@id/horizontal"
+                    android:layout_alignRight="@id/ivMorewins"
+                    android:layout_alignBottom="@id/horizontal"
+                    android:background="@drawable/ic_jackpot_change_strip" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/ivMorewins"
+                    android:fillViewport="true"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="3dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/lnrcancelist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/item_su_lastbet" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/ivMorewins"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_zigzag"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+            <!--name of game-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:src="@drawable/ic_su_title" />
+            <!--inner box of table-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+                <!--table inner part-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/dp30"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlttwosix"
+                            android:layout_width="@dimen/dt_button_width"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:background="@drawable/ic_seven_up_box_up_left"
+                            android:onClick="putBetonTwoSix"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:paddingRight="@dimen/dp5"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_seven_red_left_cornor"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="1"
+                                    android:shadowDy="1"
+                                    android:shadowRadius="3"
+                                    android:text="2-6"
+                                    android:textColor="#EEC283"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/ShadowGoldTextview"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/ic_seven_up_circlebg"
+                                    android:gravity="center"
+                                    android:text="2x"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/dp10"
+                                android:gravity="center_vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/rltDragonChips"
+                                    android:layout_width="@dimen/dt_putchips_size"
+                                    android:layout_height="@dimen/dt_putchips_size"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginRight="@dimen/dp3"
+                                    android:background="@drawable/ic_dt_chips"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/tvDragonCoins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:ellipsize="end"
+                                        android:padding="3dp"
+                                        android:shadowColor="@color/black"
+                                        android:shadowDx="1"
+                                        android:shadowDy="1"
+                                        android:shadowRadius="3"
+                                        android:text="1"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvDownMyBet"
+                                    style="@style/ShadowWhiteTextview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="5dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="@dimen/dp3"
+                                    android:text="/" />
+
+                                <TextView
+                                    android:id="@+id/tvDownTotalAmt"
+                                    style="@style/ShadowWhiteTextview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rltseven"
+                            android:layout_width="@dimen/dt_tie_radius"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:background="@drawable/ic_seven_up_box_up_mid"
+                            android:onClick="putBetonSeven"
+                            android:paddingRight="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp70"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="18dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_seven_blue_left_cornor"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="1"
+                                    android:shadowDy="1"
+                                    android:shadowRadius="3"
+                                    android:text="7"
+                                    android:textColor="#EEC283"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/ShadowGoldTextview"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/ic_seven_up_circlebg"
+                                    android:gravity="center"
+                                    android:text="5x"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/dp5"
+                                android:gravity="center_vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/rltTieChips"
+                                    android:layout_width="@dimen/dt_putchips_size"
+                                    android:layout_height="@dimen/dt_putchips_size"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/dp5"
+                                    android:background="@drawable/ic_dt_chips"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/tvTieCoins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:ellipsize="end"
+                                        android:padding="3dp"
+                                        android:shadowColor="@color/black"
+                                        android:shadowDx="1"
+                                        android:shadowDy="1"
+                                        android:shadowRadius="3"
+                                        android:text="1"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvTieAddedAmt"
+                                    style="@style/ShadowWhiteTextview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="5dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="@dimen/dp3"
+                                    android:text="/" />
+
+                                <TextView
+                                    android:id="@+id/tvTieTotalAmt"
+                                    style="@style/ShadowWhiteTextview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlteighttwelf"
+                            android:layout_width="@dimen/dt_button_width"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/ic_seven_up_box_up_right"
+                            android:onClick="putBetonEightTwelve"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="1dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="5dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="18dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_seven_green_right_cornor"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:shadowColor="@color/black"
+                                    android:shadowDx="1"
+                                    android:shadowDy="1"
+                                    android:shadowRadius="3"
+                                    android:text="8-12"
+                                    android:textColor="#EEC283"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/ShadowGoldTextview"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/ic_seven_up_circlebg"
+                                    android:gravity="center"
+                                    android:text="2x"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/dp10"
+                                android:gravity="center_vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/rltTigerChips"
+                                    android:layout_width="@dimen/dt_putchips_size"
+                                    android:layout_height="@dimen/dt_putchips_size"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginRight="@dimen/dp5"
+                                    android:background="@drawable/ic_dt_chips"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/tvTigerChips"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:ellipsize="end"
+                                        android:padding="3dp"
+                                        android:shadowColor="@color/black"
+                                        android:shadowDx="1"
+                                        android:shadowDy="1"
+                                        android:shadowRadius="3"
+                                        android:text="1"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvUpMyBet"
+                                    style="@style/ShadowWhiteTextview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="5dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="@dimen/dp3"
+                                    android:text="/" />
+
+                                <TextView
+                                    android:id="@+id/tvUpTotalAmt"
+                                    style="@style/ShadowWhiteTextview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <!--            player2-->
+            <RelativeLayout
+                android:id="@+id/rltplayer2"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:layout_marginBottom="-135dp">
+
+                <RelativeLayout
+                    android:id="@+id/rltcirclproimage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlay2"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgpl2glow"
+                        android:layout_width="@dimen/Player_glow_width"
+                        android:layout_height="@dimen/Player_glow_height"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/glow_circle"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/Player_rt_size"
+                        android:layout_height="@dimen/Player_rt_size"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_bg_circle">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgpl2circle"
+                            android:layout_width="@dimen/Player_circle_size"
+                            android:layout_height="@dimen/Player_circle_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/avatar"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar2"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/Player_progress_size"
+                            android:layout_height="@dimen/Player_progress_size"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/circular"
+                            android:secondaryProgress="100"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtwinner2"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/black_transparent"
+                        android:gravity="center"
+                        android:text="Winner"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtPlay2"
+                    style="@style/UserNameTextStyle"
+                    android:text="Player 2" />
+
+                <LinearLayout
+                    android:id="@+id/lnruserdetails2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltcirclproimage2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/wallet_text_margin_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/white_lable_small"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtPlay2wallet"
+                            style="@style/BlackTextview" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltwinnersymble2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rltplayer2"
+                android:layout_marginBottom="-35dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/giphy"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/star"
+                    android:visibility="visible" />
+            </RelativeLayout>
+            <!--            player2 end-->
+            <!--            player2 NEW-->
+            <RelativeLayout
+                android:id="@+id/lnr_new2player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="-170dp"
+                android:layout_marginBottom="-110dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rltplayer2_new"
+                    android:layout_width="235dp"
+                    android:layout_height="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:alpha="0.1"
+                        android:background="#FFC107"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltcirclproimage2_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/imgpl2_newglow"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/glow_circle"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="67dp"
+                            android:layout_height="67dp"
+                            android:background="@drawable/user_bg_circle">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgpl2_newcircle"
+                                android:layout_width="57dp"
+                                android:layout_height="57dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/avatar"
+                                android:visibility="visible" />
+
+                            <ProgressBar
+                                android:id="@+id/circularProgressbar2_new"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                android:indeterminate="false"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/circular"
+                                android:secondaryProgress="100"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtwinner2_new"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/black_transparent"
+                            android:gravity="center"
+                            android:text="Winner"
+                            android:textColor="#ffffff"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtPlay2_new"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="-20dp"
+                        android:layout_toRightOf="@+id/rltcirclproimage2_new"
+                        android:ellipsize="end"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rltcirclproimage2_new"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/white_lable_small"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/txtPlay2_newwallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltwinnersymble2_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rltplayer2_new"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="-35dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/giphy"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/star"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--            player2 New end -->
+            <!--            player3-->
+            <RelativeLayout
+                android:id="@+id/rltplayer3"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:layout_marginBottom="-100dp"
+                android:layout_toRightOf="@+id/rltplayer2"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/Player_glow_width"
+                    android:layout_height="@dimen/Player_glow_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.1"
+                    android:background="#FFC107"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rltcirclproimage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlay3"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgpl3glow"
+                        android:layout_width="@dimen/Player_glow_width"
+                        android:layout_height="@dimen/Player_glow_height"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/glow_circle"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/Player_rt_size"
+                        android:layout_height="@dimen/Player_rt_size"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_bg_circle">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgpl3circle"
+                            android:layout_width="@dimen/Player_circle_size"
+                            android:layout_height="@dimen/Player_circle_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/avatar"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar3"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/Player_progress_size"
+                            android:layout_height="@dimen/Player_progress_size"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/circular"
+                            android:secondaryProgress="100"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/black_transparent"
+                        android:gravity="center"
+                        android:text="Winner"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtPlay3"
+                    style="@style/UserNameTextStyle"
+                    android:text="Player 3" />
+
+                <LinearLayout
+                    android:id="@+id/lnruserdetails3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltcirclproimage3"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/wallet_text_margin_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/white_lable_small"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtPlay3wallet"
+                            style="@style/BlackTextview" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltwinnersymble3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rltplayer3"
+                android:layout_marginBottom="-30dp"
+                android:layout_toRightOf="@+id/rltplayer2"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/giphy"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/star"
+                    android:visibility="visible" />
+            </RelativeLayout>
+            <!--            player end-->
+            <!--            player4-->
+            <!--        android:layout_toRightOf="@+id/rltplayer3"-->
+            <RelativeLayout
+                android:id="@+id/rltplayer4"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:layout_marginBottom="-100dp"
+                android:layout_toLeftOf="@+id/rltplayer5"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/Player_glow_width"
+                    android:layout_height="@dimen/Player_glow_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.1"
+                    android:background="#FFC107"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rltcirclproimage4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlay4"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgpl4glow"
+                        android:layout_width="@dimen/Player_glow_width"
+                        android:layout_height="@dimen/Player_glow_height"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/glow_circle"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/Player_rt_size"
+                        android:layout_height="@dimen/Player_rt_size"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_bg_circle">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgpl4circle"
+                            android:layout_width="@dimen/Player_circle_size"
+                            android:layout_height="@dimen/Player_circle_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/avatar"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar4"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/Player_progress_size"
+                            android:layout_height="@dimen/Player_progress_size"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/circular"
+                            android:secondaryProgress="100"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/black_transparent"
+                        android:gravity="center"
+                        android:text="Winner"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtPlay4"
+                    style="@style/UserNameTextStyle"
+                    android:text="Player 4" />
+
+                <LinearLayout
+                    android:id="@+id/lnruserdetails4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltcirclproimage4"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/wallet_text_margin_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/white_lable_small"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtPlay4wallet"
+                            style="@style/BlackTextview" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltwinnersymble4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rltplayer4"
+                android:layout_marginBottom="-30dp"
+                android:layout_toLeftOf="@+id/rltplayer5"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/giphy"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/star"
+                    android:visibility="visible" />
+            </RelativeLayout>
+            <!--            player4 end-->
+            <!--            player5-->
+            <RelativeLayout
+                android:id="@+id/rltplayer5"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="-135dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/rltcirclproimage5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlay5"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgpl5glow"
+                        android:layout_width="@dimen/Player_glow_width"
+                        android:layout_height="@dimen/Player_glow_height"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/glow_circle"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/Player_rt_size"
+                        android:layout_height="@dimen/Player_rt_size"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_bg_circle">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgpl5circle"
+                            android:layout_width="@dimen/Player_circle_size"
+                            android:layout_height="@dimen/Player_circle_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/avatar"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar5"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/Player_progress_size"
+                            android:layout_height="@dimen/Player_progress_size"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/circular"
+                            android:secondaryProgress="100"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/black_transparent"
+                        android:gravity="center"
+                        android:text="Winner"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtPlay5"
+                    style="@style/UserNameTextStyle"
+                    android:text="Player 5" />
+
+                <LinearLayout
+                    android:id="@+id/lnruserdetails5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltcirclproimage5"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/wallet_text_margin_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/white_lable_small"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtPlay5wallet"
+                            style="@style/BlackTextview" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltwinnersymble5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rltplayer5"
+                android:layout_marginBottom="-30dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/giphy"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/star"
+                    android:visibility="visible" />
+            </RelativeLayout>
+            <!--            player5 end-->
+            <!--            player6 start-->
+            <RelativeLayout
+                android:id="@+id/rltplayer6"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:layout_marginBottom="-100dp"
+                android:layout_toRightOf="@+id/rltplayer5"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rltcirclproimage6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlay6"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgpl6glow"
+                        android:layout_width="@dimen/Player_glow_width"
+                        android:layout_height="@dimen/Player_glow_width"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/glow_circle"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/Player_rt_size"
+                        android:layout_height="@dimen/Player_rt_size"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_bg_circle">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgpl6circle"
+                            android:layout_width="@dimen/Player_circle_size"
+                            android:layout_height="@dimen/Player_circle_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/avatar"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar6"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/Player_progress_size"
+                            android:layout_height="@dimen/Player_progress_size"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/circular"
+                            android:secondaryProgress="100"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/black_transparent"
+                        android:gravity="center"
+                        android:text="Winner"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtPlay6"
+                    style="@style/UserNameTextStyle"
+                    android:text="Player 6" />
+
+                <LinearLayout
+                    android:id="@+id/lnruserdetails6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltcirclproimage6"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/wallet_text_margin_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/white_lable_small"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtPlay6wallet"
+                            style="@style/BlackTextview" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltwinnersymble6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rltplayer6"
+                android:layout_marginBottom="-30dp"
+                android:layout_toRightOf="@+id/rltplayer5"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/giphy"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/star"
+                    android:visibility="visible" />
+            </RelativeLayout>
+            <!-- player 6 end-->
+            <!--  player7 start -->
+            <RelativeLayout
+                android:id="@+id/rltplayer7"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:layout_marginBottom="-135dp"
+                android:layout_toRightOf="@+id/rltplayer6"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rltcirclproimage7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPlay7"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/imgpl7glow"
+                        android:layout_width="@dimen/Player_glow_width"
+                        android:layout_height="@dimen/Player_glow_width"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/glow_circle"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/Player_rt_size"
+                        android:layout_height="@dimen/Player_rt_size"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/user_bg_circle">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgpl7circle"
+                            android:layout_width="@dimen/Player_circle_size"
+                            android:layout_height="@dimen/Player_circle_size"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/avatar"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/circularProgressbar7"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/Player_progress_size"
+                            android:layout_height="@dimen/Player_progress_size"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/circular"
+                            android:secondaryProgress="100"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/black_transparent"
+                        android:gravity="center"
+                        android:text="Winner"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtPlay7"
+                    style="@style/UserNameTextStyle"
+                    android:text="Player 7" />
+
+                <LinearLayout
+                    android:id="@+id/lnruserdetails7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rltcirclproimage7"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/wallet_text_margin_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/white_lable_small"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtPlay7wallet"
+                            style="@style/BlackTextview" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltwinnersymble7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rltplayer7"
+                android:layout_toRightOf="@+id/rltplayer6"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/player_width"
+                    android:layout_height="@dimen/player_height"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/giphy"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="@dimen/player_width"
+                    android:layout_height="@dimen/player_height"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/star"
+                    android:visibility="visible" />
+            </RelativeLayout>
+            <!-- player 7 end-->
+        </RelativeLayout>
+        <!--  Players Layout END -->
+        <include
+            layout="@layout/view_gameuser_bottom__strip"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_100dp"
+            android:layout_alignParentBottom="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_70dp"
+            android:layout_toLeftOf="@+id/imgTable"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/txtGameRunning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Please wait for Next Round"
+                android:textColor="#EEC283"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtGameBets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Place your coins"
+                android:textColor="#EEC283"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sticker_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rltwinnersymble1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ivWine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_dt_tiger_win"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:gravity="center"
+                android:text="Tiger Win"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                app:layout_constraintBottom_toBottomOf="@+id/ivWine"
+                app:layout_constraintEnd_toEndOf="@+id/ivWine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivWine" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/rtllosesymble1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ivlose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_dt_tiger_win"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvlose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:gravity="center"
+                android:text="Tiger Win"
+                android:textColor="@color/BrownColor"
+                android:textSize="20sp"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                app:layout_constraintBottom_toBottomOf="@+id/ivlose"
+                app:layout_constraintEnd_toEndOf="@+id/ivlose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivlose" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltDicerollparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivWinCard"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/backside_card" />
+        </RelativeLayout>
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:visibility="visible">-->
+        <ImageView
+            android:id="@+id/dice1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/dice"
+            android:elevation="10dp"
+            android:src="@drawable/dots_6" />
+
+        <ImageView
+            android:id="@+id/dice2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/dice1"
+            android:background="@drawable/dice"
+            android:elevation="10dp"
+            android:rotation="55"
+            android:src="@drawable/dots_6" />
+        <!--        </RelativeLayout>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltBetStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivBetStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp120"
+        android:weightSum="4"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/left_user1"
+            android:gravity="center"
+            android:text="User 1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/left_user2"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="User 2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:id="@+id/left_user3"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="User 3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/left_user4"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="User 4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/dp130"
+        android:layout_alignParentEnd="true"
+        android:weightSum="4"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/right_user1"
+            android:layout_weight="1"
+            android:layout_gravity="start|center"
+            android:text="User 1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/right_user2"
+            android:layout_weight="1"
+            android:layout_gravity="start|center"
+            android:text="User 2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:id="@+id/right_user3"
+            android:layout_weight="1"
+            android:layout_gravity="start|center"
+            android:text="User 3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/right_user4"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:layout_gravity="start|center"
+            android:text="User 4" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_bots"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp90"
+        tools:listitem="@layout/item_bots"
+        tools:itemCount="3"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_bots_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/dp90"
+        android:visibility="visible"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_bots" />
+
+</RelativeLayout>

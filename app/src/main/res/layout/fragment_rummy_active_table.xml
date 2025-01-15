@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltParentView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/lnrCreateTable"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_btn_logout"
+            android:gravity="center"
+            android:paddingLeft="6dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="2dp"
+            android:text="@string/create_group"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:fontFilePath="@string/Helvetica_Bold_Extra" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rltTabaleList"
+        style="@style/popUpBoxbg"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp20" >
+
+            <!--            android:layout_below="@+id/rtl_toolbar"-->
+            <!--            android:layout_marginHorizontal="25dp"-->
+            <!--            android:layout_marginTop="@dimen/pop_up_top_margin"-->
+            <!--            style="@style/popUpBoxbg"-->
+            <!--            android:orientation="vertical"-->
+
+            <RelativeLayout
+                android:id="@+id/lnr_box"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/payu_dimen_45dp"
+                        android:background="@drawable/purple_top"
+                        android:elevation="2dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="3dp">
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tvHeading1"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/id"
+                                android:textColor="@color/white"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tvHeading2"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/tablename"
+                                android:textColor="@color/white"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1">
+
+                            <TextView
+                                android:id="@+id/tvHeading3"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/min_pot"
+                                android:textColor="@color/white"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvHeading4"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/max_player"
+                                android:textColor="@color/white"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tvHeading5"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/online"
+                                android:textColor="@color/white"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="?dividerHorizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvHeading6"
+                                style="@style/TableHeadingTextView"
+                                android:text="Table Type"
+                                android:textColor="@color/white"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvHeading7"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/viewer_status"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/table_heading_size"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnrHeading8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.3">
+
+                            <TextView
+                                android:id="@+id/tvHeading8"
+                                style="@style/TableHeadingTextView"
+                                android:text="@string/action"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/table_heading_size"
+                                app:fontFilePath="@string/Helvetica_Bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_user_points"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/rv_tabel_top"
+                        tools:listitem="@layout/item_rummy_active_table" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtnotfound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Data no available!"
+                    android:visibility="gone"
+                    app:fontFilePath="@string/Helvetica_Bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlt_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:indeterminateDrawable="@drawable/cpb_3"
+                        android:indeterminateDuration="4000"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <include
+                layout="@layout/dialog_toolbar"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

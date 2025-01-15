@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/rltBetview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/rec_rules"
+                android:layout_alignRight="@id/rec_rules"
+                android:layout_alignTop="@id/rec_rules"
+                android:layout_alignBottom="@id/rec_rules"
+                android:background="@drawable/ic_carroulate_betbg"
+                android:paddingTop="@dimen/dp30"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_rules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingRight="@dimen/dp10"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_carroullete_type" />
+        </RelativeLayout>
+
+        <!-- <LinearLayout
+             android:id="@+id/lnrcarsList"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/dp180"
+             android:layout_marginBottom="@dimen/dp120"
+             android:layout_toRightOf="@+id/rltBetview"
+             android:orientation="vertical"
+             android:paddingVertical="@dimen/dp50"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toEndOf="@+id/rltBetview"
+             app:layout_constraintTop_toTopOf="parent">
+
+             <ScrollView
+                 android:id="@+id/horizontal"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:fillViewport="true"
+                 android:scrollbars="none">
+
+                 <LinearLayout
+                     android:id="@+id/lnrcancelist"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <include
+                         layout="@layout/item_carroulate_lastwin"
+                         />
+                 </LinearLayout>
+             </ScrollView>
+         </LinearLayout>-->
+    </RelativeLayout>
+    <!-- <RelativeLayout
+         android:id="@+id/rltBetview"
+         android:layout_width="450dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/lnrcarsList"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <ImageView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignLeft="@id/rec_rules"
+             android:layout_alignTop="@id/rec_rules"
+             android:layout_alignRight="@id/rec_rules"
+             android:layout_alignBottom="@id/rec_rules"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:background="@drawable/ic_carroulate_betbg" />
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rec_rules"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingLeft="@dimen/dp10"
+             android:paddingTop="@dimen/dp5"
+             android:paddingRight="@dimen/dp10"
+             tools:itemCount="1"
+             tools:listitem="@layout/item_carroullete_type" />
+     </RelativeLayout>
+  &lt;!&ndash;   <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:paddingLeft="@dimen/dimen_15dp"
+         android:paddingRight="@dimen/dimen_15dp"
+         tools:ignore="MissingConstraints">
+
+         &lt;!&ndash;<ImageView
+             android:id="@+id/imgTable"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignLeft="@id/lnrcarsList"
+             android:layout_alignTop="@id/lnrcarsList"
+             android:layout_alignRight="@id/lnrcarsList"
+             android:layout_alignBottom="@id/rltBetview"
+             android:layout_centerHorizontal="true"
+             android:background="@drawable/ic_carroulate_bg"
+             android:layout_marginBottom="25dp"
+             android:visibility="visible" />&ndash;&gt;
+         &lt;!&ndash;<ImageView
+             android:id="@+id/imgTable"
+             android:layout_width="31dp"
+             android:layout_height="216dp"
+             android:layout_centerVertical="true"
+             android:layout_marginBottom="25dp"
+             android:background="@drawable/ic_carroulate_bg"
+             android:visibility="visible" />&ndash;&gt;
+
+
+
+     </LinearLayout>&ndash;&gt;
+
+     <LinearLayout
+         android:id="@+id/lnrcarsList"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="@dimen/dp40"
+         android:layout_marginBottom="@dimen/dp120"
+         android:layout_toRightOf="@+id/rltBetview"
+         android:orientation="vertical"
+         android:paddingVertical="@dimen/dp50"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/rltBetview"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <ScrollView
+             android:id="@+id/horizontal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fillViewport="true"
+             android:scrollbars="none">
+
+             <LinearLayout
+                 android:id="@+id/lnrcancelist"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+
+                 <include
+                     layout="@layout/item_carroulate_lastwin"
+                      />
+             </LinearLayout>
+         </ScrollView>
+     </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

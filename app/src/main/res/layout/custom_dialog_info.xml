@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialogParentStyle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+        <TextView
+            android:id="@+id/txtgudluck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOOD LUCK WITH YOUR CARDS"
+            android:textSize="22dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textColor="@color/coloryellow"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:paddingRight="15dp"
+    android:weightSum="4"
+    android:paddingLeft="20dp"
+    style="@style/popUpBoxbg"
+    android:layout_marginRight="20dp"
+    android:layout_marginHorizontal="75dp"
+    android:padding="40dp"
+    >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center_vertical"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:padding="10dp"
+    android:layout_marginTop="10dp"
+    >
+    <TextView
+        android:id="@+id/txtboot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOOT VALUE : "
+        android:textColor="@color/colordullwhite"
+        android:textSize="15dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/txtbootvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="350"
+        android:textSize="15dp"
+        android:textColor="@color/coloryellow"
+        android:layout_alignParentRight="true"
+        />
+
+
+
+
+
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/line"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+
+        >
+
+
+
+
+        <TextView
+            android:id="@+id/txtmaxblind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAXIMUM BLINDS : "
+            android:textSize="15dp"
+            android:textColor="@color/colordullwhite"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/txtmaxblindvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="15dp"
+            android:textColor="@color/coloryellow"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/line"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/txtchallimt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHAAL LIMIT : "
+            android:textSize="15dp"
+            android:textColor="@color/colordullwhite"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/txtchallimtvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="44,800"
+            android:textSize="15dp"
+            android:textColor="@color/coloryellow"
+            android:layout_alignParentRight="true"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/txtpotlimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POT LIMIT : "
+            android:textSize="15dp"
+            android:textColor="@color/colordullwhite"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/txtpotlimitvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3,58,400"
+            android:textSize="15dp"
+            android:textColor="@color/coloryellow"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgclosetop"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_close_new"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="visible"
+        />
+</RelativeLayout>

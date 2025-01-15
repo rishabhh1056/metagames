@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    tools:context=".RedeemCoins.RedeemActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlt_profile"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/toppannel"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imgback"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rltimageptofile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imaprofile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/circle" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_levels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/rltimageptofile"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtproname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@+id/imaprofile"
+                android:gravity="top"
+                android:text="Total"
+                android:textAllCaps="true"
+                android:textColor="#E29700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lnr_levels"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lnrhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_marginRight="-20dp"
+                        android:layout_toLeftOf="@+id/iv_add"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:background="@drawable/coupon" />
+
+                    <ImageView
+                        android:id="@+id/imgicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/gif_ruppe_" />
+
+                    <TextView
+                        android:id="@+id/txtwallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:text="2.37L"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_add"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/txtwallet"
+                        android:src="@drawable/ic_add_circle" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvRedeemWallet"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:layout_marginLeft="180dp"-->
+        <!--            android:layout_marginTop="40dp"-->
+        <!--            android:layout_marginRight="5dp"-->
+        <!--            android:layout_toRightOf="@+id/lnr_levels"-->
+        <!--            android:text="Amount can be Redeem"-->
+        <!--            android:textColor="@color/colordullwhite"-->
+        <!--            android:textSize="16sp" />-->
+        <LinearLayout
+            android:id="@+id/lnr_levels2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lnr_levels"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtprowallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@+id/imaprofile"
+                android:gravity="top"
+                android:text="Bonus"
+                android:textAllCaps="true"
+                android:textColor="#E29700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/lnr_levels"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lnrhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:background="@drawable/coupon" />
+
+                    <ImageView
+                        android:id="@+id/imgicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/gif_ruppe_" />
+
+                    <TextView
+                        android:id="@+id/txtbonus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:text="2.37L"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="16sp" />
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/iv_add"-->
+                    <!--                        android:layout_width="24dp"-->
+                    <!--                        android:layout_height="24dp"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_gravity="center_vertical"-->
+                    <!--                        android:layout_toRightOf="@+id/txtbonus"-->
+                    <!--                        android:src="@drawable/ic_add_circle" />-->
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_levels3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lnr_levels2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtwinwallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_toRightOf="@+id/imaprofile"
+                android:gravity="center"
+                android:text="Winning Wallet"
+                android:textAllCaps="true"
+                android:textColor="#E29700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/lnr_levels"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lnrhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:background="@drawable/coupon" />
+
+                    <ImageView
+                        android:id="@+id/imgicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/gif_ruppe_" />
+
+                    <TextView
+                        android:id="@+id/txtwin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:text="2.37L"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="16sp" />
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/iv_add"-->
+                    <!--                        android:layout_width="24dp"-->
+                    <!--                        android:layout_height="24dp"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_gravity="center_vertical"-->
+                    <!--                        android:layout_toRightOf="@+id/txtwin"-->
+                    <!--                        android:src="@drawable/ic_add_circle" />-->
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnr_levels4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/lnr_levels3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtunutiwallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@+id/imaprofile"
+                android:gravity="center"
+                android:text="Unutilized Wallet"
+                android:textAllCaps="true"
+                android:textColor="#E29700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/lnr_levels"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lnrhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="-20dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:background="@drawable/coupon" />
+
+                    <ImageView
+                        android:id="@+id/imgicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/gif_ruppe_" />
+
+                    <TextView
+                        android:id="@+id/txtunuti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/imgicon"
+                        android:text="2.37L"
+                        android:textColor="@color/colordullwhite"
+                        android:textSize="16sp" />
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/iv_add"-->
+                    <!--                        android:layout_width="24dp"-->
+                    <!--                        android:layout_height="24dp"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_gravity="center_vertical"-->
+                    <!--                        android:layout_toRightOf="@+id/txtunuti"-->
+                    <!--                        android:src="@drawable/ic_add_circle" />-->
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlt_profile"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        tools:itemCount="1"
+        tools:listitem="@layout/redeem_buy_layout" />
+
+    <LinearLayout
+        android:id="@+id/linear_no_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:tint="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Withdraw amount available."
+            android:textColor="@color/colordullwhite"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

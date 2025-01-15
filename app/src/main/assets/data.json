@@ -1,0 +1,40 @@
+{
+  "pay_method": [
+    {
+      "id": "1",
+      "name": "Paytm",
+      "pay_with": "paytm",
+      "image": "paytm.png"
+    },
+    {
+      "id": "2",
+      "name": "Paypal",
+      "pay_with": "paypal",
+      "image": "paypal_logo.png"
+    },
+    {
+      "id": "3",
+      "name": "PhonePe",
+      "pay_with": "phonepe",
+      "image": "phonepe.png"
+    },
+    {
+      "id": "4",
+      "name": "Gpay",
+      "pay_with": "gpay",
+      "image": "new_gpat.png"
+    },
+    {
+      "id": "5",
+      "name": "amazon",
+      "pay_with": "amazon",
+      "image": "amzon_pay.png"
+    },
+    {
+      "id": "6",
+      "name": "Jio",
+      "pay_with": "jio",
+      "image": "jio_money.png"
+    }
+  ]
+}

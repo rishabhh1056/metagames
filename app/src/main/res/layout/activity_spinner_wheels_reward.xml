@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialogParentStyle"
+    tools:context=".Activity.Spinner_Wheels">
+
+    <RelativeLayout
+        android:id="@+id/rlt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/lnr_box"
+            style="@style/popUpBoxbg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="@dimen/pop_up_top_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/payu_dimen_42dp"
+                android:layout_marginEnd="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp15"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp10">
+
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wheel"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="Spin Once a Day to draw different recharge dicsount"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/gold_color"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_extra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/triangle"
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_above="@id/wheel"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="-30dp"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/triangle" />
+
+                        <ImageView
+                            android:id="@+id/wheel"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/dp25"
+                            android:adjustViewBounds="true"
+                            android:rotation="15"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/wheels_100" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wheel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:includeFontPadding="false"
+                        android:text="Number:0"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp10">
+
+                    <TextView
+                        android:id="@+id/resultTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wheel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:includeFontPadding="false"
+                        android:text="you will get 2% discount"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/yellow1"
+                        android:textSize="@dimen/payu_dimen_20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/spin_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wheel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:includeFontPadding="false"
+                        android:text="your have 0 spin remaining"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp18"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wheel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:includeFontPadding="false"
+
+                        android:text="To get more Spins Add Amount to your Wallet."
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_12dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/spinBtn"
+                        android:layout_width="@dimen/dimen_100dp"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_below="@id/resultTv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/bg_gredient_white_border"
+                        android:text="SPIN"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/dp20"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:text="NOTE: Rs.100 = 1 SPIN"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/yellow1"
+                android:textSize="@dimen/dimen_12dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/dialog_toolbar" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_no_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:tint="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Winning History is Available"
+            android:textColor="@color/colordullwhite"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

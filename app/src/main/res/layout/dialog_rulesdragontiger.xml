@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/dialogParentStyle">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/popUpBoxbg"
+        android:layout_alignLeft="@id/lnr_box"
+        android:layout_alignRight="@id/lnr_box"
+        android:layout_alignTop="@id/lnr_box"
+        android:layout_alignBottom="@id/lnr_box"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnr_box"
+        android:layout_below="@+id/rtl_toolbar"
+        android:layout_marginTop="@dimen/pop_up_top_margin"
+        android:layout_marginHorizontal="25dp"
+        android:padding="20dp"
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/dp20"
+            >
+
+            <LinearLayout
+                android:id="@+id/lnrRuleslist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp20"
+                android:paddingBottom="@dimen/dp20"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_marginRight="@dimen/dp25"
+                    android:layout_marginLeft="@dimen/dp25"
+                    android:background="@drawable/dragon_vs_tiger_new"
+                    />
+
+                <TextView
+                    android:layout_below="@+id/how_to"
+                    android:textColor="@color/white"
+                    android:text="
+** Games Rules **\n\n
+* The dealer deals two cards each game, one for the Dragon and one for the Tiger. Simply makes a bet to Dragon or Tiger which could draw the highest card.\n\n
+* Card from the smallest to the biggest are (ignoring the symbols) :\n
+A&lt;2&lt;3&lt;4&lt;5&lt;6&lt;7&lt;8&lt;9&lt;10&lt;J&lt;Q&lt;K\n\n
+Paid for Dragon / Tiger: 1:1\n
+Paid for Tie: 1:8\n
+Paid for Dragon / Tiger : 1:1\n
+Paid for Tie: 1:8\n\n
+* For Tie, betting on the Dragon and Tiger will get half of the bet amount return back.
+"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:textSize="@dimen/sp16"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/dialog_toolbar"/>
+
+
+</RelativeLayout>

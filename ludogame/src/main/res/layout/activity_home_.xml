@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.first_player_games.Home_Activity"
+    android:background="@color/windows_backgroind_1"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/background_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bottom_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:translationY="30dp"
+        android:visibility="gone"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nameview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/profile_text"
+            android:fontFamily="@font/oswald"
+            android:background="@drawable/profile_image_container"
+            android:backgroundTint="@color/profile_border"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="buyDiamondDice"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clipToPadding="false"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="15dp"
+            >
+
+
+            <TextView
+                android:id="@+id/diamonds_available_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/rounded_shape"
+                android:backgroundTint="@color/white"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="0"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/mama_bear"
+                android:paddingVertical="3dp"
+                />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/diamobd_dice"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/add_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+            app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+            android:layout_marginRight="15dp"
+            app:tint="@color/blue1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/new_logo_stars"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.2"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/updatesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mama_bear"
+        android:paddingVertical="5dp"
+        android:elegantTextHeight="true"
+        android:background="#66000000"
+        android:visibility="gone"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/updatesView">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_card_height"
+                    android:layout_marginRight="@dimen/home_card_left_mar"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:onClick="menuLudoMenu"
+                    android:src="@drawable/ic_ludo"
+                    app:layout_constraintTop_toBottomOf="@+id/button2"
+                    android:visibility="visible"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_card_height"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:onClick="menuButtonPlayOnline"
+                    android:layout_marginRight="@dimen/home_card_left_mar"
+                    android:src="@drawable/new_small_play_online"
+                    app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="@dimen/home_card_left_mar"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:onClick="menuTournamentsButton"
+                    android:src="@drawable/new_small_tournaments"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_button"
+        android:onClick="settingsButton"
+        android:paddingHorizontal="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_settings"
+        android:tint="@color/yellow_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_button"
+        android:onClick="shareApp"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_share"
+        android:tint="@color/yellow_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_button"
+        android:onClick="payoutButton"
+        android:paddingHorizontal="2dp"
+        android:paddingBottom="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/payout_icon"
+        android:tint="@color/yellow_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/lnrludooption"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:onClick="menuLudoParentClick"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginRight="@dimen/home_card_left_mar"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:onClick="menuButtonLocalGame"
+                android:src="@drawable/new_small_play_local_menu"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:onClick="menuButtonVsComputer"
+                android:layout_marginRight="@dimen/home_card_left_mar"
+                android:src="@drawable/new_small_vs_computer"
+                app:layout_constraintTop_toBottomOf="@id/button1" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

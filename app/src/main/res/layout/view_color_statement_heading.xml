@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/dp5"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_weight=".6"
+        app:cardBackgroundColor="#F56D3D"
+        style="@style/colorLastWinHeadingbg"
+        >
+
+        <TextView
+            style="@style/colorLastWinHeadingText"
+            android:text="Sr No."
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_weight="1.5"
+        app:cardBackgroundColor="#F56D3D"
+        style="@style/colorLastWinHeadingbg"
+        >
+
+        <TextView
+            style="@style/colorLastWinHeadingText"
+            android:text="Source"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_weight="1.1"
+        app:cardBackgroundColor="#F56D3D"
+        style="@style/colorLastWinHeadingbg"
+        >
+
+        <TextView
+            style="@style/colorLastWinHeadingText"
+            android:text="Game Id"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_weight="1.6"
+        app:cardBackgroundColor="#F56D3D"
+        style="@style/colorLastWinHeadingbg"
+        >
+
+        <TextView
+            style="@style/colorLastWinHeadingText"
+            android:text="Wallet"
+            />
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_weight="1.8"
+        app:cardBackgroundColor="#F56D3D"
+        style="@style/colorLastWinHeadingbg"
+        >
+
+        <TextView
+            style="@style/colorLastWinHeadingText"
+            android:text="Added Date"
+            />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3D7EFE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="color2">#FFFFFF</color>
+    <color name="colordullwhite">#FFFFFF</color>
+    <color name="colorredbutton">#DA4900</color>
+    <color name="coloryellow">#E7FA2D</color>
+    <color name="colorslety">#ADACAD</color>
+    <color name="colorgreen">#00DF33</color>
+
+    <color name="lightWhite">#ffffcf</color>
+
+    <color name="yellow">#f6b148</color>
+    <color name="backgoundfragmend">#2b2b2b</color>
+    <color name="black">#000</color>
+
+    <color name="lghtAccent">#f6b148</color>
+    <color name="medgreen">#72b140</color>
+    <color name="btn_green">#048a00</color>
+    <color name="Golder_yellow">#FFDF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="nevi_blue">#B20C2840</color>
+    <color name="blue">#0f4c82</color>
+    <color name="rewardGold">#f4b95b</color>
+    <color name="blackbg">#232323</color>
+    <color name="BrownColor">#8A0204</color>
+    <color name="gray">#595953</color>
+    <color name="green">#29c17e</color>
+    <color name="active_navcolor">#fca941</color>
+    <color name="default_textcolor">#b5b5b5</color>
+    <color name="unactive_navcolor">#6c7c8f</color>
+    <color name="blue_light">#41a6ae</color>
+    <color name="red">#D50000</color>
+    <color name="gold">#fbf6b2</color>
+    <color name="gold_color">#F4DD70</color>
+
+
+    <color name="table_list_color">#AA4878</color>
+    <color name="table_list_color2">#48484a</color>
+    <color name="table_background_color">#4E0027</color>
+
+    <color name="pop_setting_stroke">#890044</color>
+    <color name="strip_setting_bg">#0C2840</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="text_color_primary">#609b95</color>
+    <color name="orange">#EEC283</color>
+    <color name="gray_line">#D6D6D6</color>
+    <color name="gray_bg">#BDBEC1</color>
+
+    <color name="table_value_color">#FFFFFF</color>
+    <color name="new_colorPrimary">#3C02BD</color>
+    <color name="new_colorPrimaryDark">#3C02BD</color>
+    <color name="new_yellow">#e19303</color>
+    <color name="hint_color">#ae99ba</color>
+
+    <color name="darkRedColor">#75101C</color>
+    <color name="login_buttontxtColor">#75101C</color>
+    <color name="headingColor">@color/colorPrimary</color>
+    <color name="subHeadingColor">@color/colorAccent</color>
+    <color name="editTextColor">@color/colorAccent</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="rewardBrownz">#e9b079</color>
+</resources>

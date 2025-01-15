@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rltDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            style="@style/popUpBoxbgProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/lnrProfileDetails"
+            android:layout_alignTop="@id/lnrProfileDetails"
+            android:layout_alignRight="@id/lnrProfileDetails"
+            android:layout_alignBottom="@id/lnrProfileDetails" />
+
+        <RelativeLayout
+            android:id="@+id/lnrProfileDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/rlt_profile"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/img_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp10"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEditProfile"
+                    style="@style/ShadowGoldTextview"
+                    android:text="Profile"
+                    android:visibility="gone"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvKYC"
+                    style="@style/ShadowGoldTextview"
+                    android:text="Update Password"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textSize="18sp" />
+                <ImageView
+                    android:id="@+id/verified"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="3dp"
+                    android:visibility="gone"
+                     />
+            </LinearLayout>
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_edit">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="@dimen/dp20"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnr_userinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout style="@style/profileFieldParent">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled1"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Name:" />
+
+                                <TextView
+                                    android:id="@+id/txt_diaName"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/profileFieldParent"
+                                android:background="@null">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled2"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Mobile no:" />
+
+                                <TextView
+                                    android:id="@+id/txt_diaPhone"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout style="@style/profileFieldParent">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled3"
+                                    style="@style/profileFieldTextView"
+                                    android:text="UPI ID:" />
+
+                                <TextView
+                                    android:id="@+id/txt_upi"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/profileFieldParent"
+                                android:background="@null">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled4"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Bank Details:" />
+
+                                <TextView
+                                    android:id="@+id/txt_bank"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/profileFieldParent"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/Headingfiled5"
+                                    style="@style/profileFieldTextView"
+                                    android:text="Aadhar card no:" />
+
+                                <TextView
+                                    android:id="@+id/txt_adhar"
+                                    style="@style/profileFieldValueTextView" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_updateuser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:text="Old Password:"
+                            android:paddingBottom="@dimen/dp5"
+                            android:textColor="@color/Golder_yellow"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_oldpass"
+                                style="@style/EditTextWithBackground_new"
+                                android:hint="Enter old Password" />
+
+                            <Button
+                                android:text="Choose Img"
+                                android:id="@+id/upload_pan"
+                                android:textAllCaps="true"
+                                android:visibility="gone"
+                                android:textColor="@color/black"
+                                android:layout_marginTop="@dimen/dp7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <RelativeLayout
+                                android:id="@+id/rlt_pan"
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp40">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignLeft="@id/img_pan"
+                                    android:layout_alignTop="@id/img_pan"
+                                    android:layout_alignRight="@id/img_pan"
+                                    android:layout_alignBottom="@id/img_pan"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/img_pan"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:padding="@dimen/dp10"
+                                    android:src="@drawable/app_icon" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="-15dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toRightOf="@+id/img_pan"
+                                    />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:text="New Password:"
+                            android:paddingBottom="@dimen/dp5"
+                            android:textColor="@color/Golder_yellow"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_newpass"
+                                style="@style/EditTextWithBackground_new"
+                                android:layout_marginBottom="20dp"
+                                android:hint="Enter New Password" />
+                            <Button
+                                android:text="Choose IMG"
+                                android:id="@+id/upload_aadhar"
+                                android:textColor="@color/black"
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/dp7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rlt_aadhar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginLeft="@dimen/dp40">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignLeft="@id/img_aadhar"
+                                    android:layout_alignTop="@id/img_aadhar"
+                                    android:layout_alignRight="@id/img_aadhar"
+                                    android:layout_alignBottom="@id/img_aadhar" />
+
+                                <ImageView
+                                    android:id="@+id/img_aadhar"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:padding="@dimen/dp10"
+                                    android:src="@drawable/app_icon" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="-15dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toRightOf="@+id/img_aadhar" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_status"
+                            android:text="Docs Status: Pending"
+                            android:paddingBottom="@dimen/dp2"
+                            android:textAlignment="center"
+                            android:visibility="invisible"
+                            android:textColor="@color/Golder_yellow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/txt_reason"
+                            android:paddingBottom="@dimen/dp5"
+                            android:textAlignment="center"
+                            android:visibility="gone"
+                            android:textColor="@color/Golder_yellow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <ImageView
+                            android:id="@+id/imgsub"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@drawable/update" />
+
+                        <EditText
+                            android:visibility="gone"
+                            android:id="@+id/edtUsername"
+                            style="@style/EditTextWithBackground"
+                            android:hint="Enter User Name" />
+
+                        <EditText
+                            android:visibility="gone"
+                            android:id="@+id/edtUserupi"
+                            style="@style/EditTextWithBackground"
+                            android:hint="Enter UPI" />
+
+                        <EditText
+                            android:visibility="gone"
+                            android:id="@+id/edtUserbank"
+                            style="@style/EditTextWithBackground"
+                            android:layout_marginBottom="20dp"
+                            android:hint="Enter Bank Details" />
+
+                        <EditText
+                            android:id="@+id/edtUseradhar"
+                            style="@style/EditTextWithBackground"
+                            android:hint="Enter Adahar card"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <ImageView
+                android:id="@+id/imgclosetop"
+                style="@style/closeButton"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="0dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlt_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/img_diaProfile"
+                android:layout_alignTop="@id/img_diaProfile"
+                android:layout_alignRight="@id/img_diaProfile"
+                android:layout_alignBottom="@id/img_diaProfile"
+                android:src="@drawable/user_bg_circle" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_diaProfile"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/app_icon" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="-15dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/img_diaProfile"
+                android:src="@drawable/ic_baseline_camera" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

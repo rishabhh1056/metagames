@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    tools:context=".Statement">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnr_box"
+        android:background="@drawable/d_pop_setting"
+        android:layout_below="@+id/rtl_toolbar"
+        android:layout_marginTop="@dimen/pop_up_top_margin"
+        android:padding="@dimen/dp10"
+        >
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:text="Apply Redeem"
+            android:layout_width="160dp"
+            android:layout_marginTop="@dimen/dp25"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="@dimen/dimen_17sp"
+            android:paddingBottom="@dimen/dp7"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/orange_btn"
+            android:layout_height="@dimen/dp50"/>
+
+        <LinearLayout
+            android:id="@+id/lnrRuleslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp35"
+            android:paddingBottom="@dimen/dp20"
+            >
+
+            <include
+                android:visibility="gone"
+                layout="@layout/view_color_statement_heading"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                >
+                <LinearLayout
+                    android:id="@+id/lnrlastView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <include
+                        layout="@layout/view_tour_list"/>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:text="Prizes:"
+                android:layout_width="match_parent"
+                android:textColor="@color/yellow1"
+                android:textSize="@dimen/dimen_18sp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/lnrPrices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d_background_border_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txt_gold"
+                        android:text=" 1st:"
+                        android:layout_width="@dimen/dp150"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_18sp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:drawableLeft="@drawable/drawable_gold"
+                        android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txt_1st_win"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:textColor="@color/white"
+                            android:textAlignment="textEnd"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp50"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <View android:background="@color/gray"
+                        android:layout_width = "match_parent"
+                        android:layout_marginLeft="@dimen/dp40"
+                        android:layout_marginRight="@dimen/dp40"
+                        android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_silver"
+                        android:text=" 2nd:"
+                        android:layout_width="@dimen/dp150"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_18sp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:drawableLeft="@drawable/drawable_silver"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txt_2nd_win"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:textColor="@color/white"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/dimen_18sp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginLeft="@dimen/dp50"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                    <View android:background="@color/gray"
+                        android:layout_width = "match_parent"
+                        android:layout_marginLeft="@dimen/dp40"
+                        android:layout_marginRight="@dimen/dp40"
+                        android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_bronze"
+                        android:text=" 3rd:"
+                        android:layout_width="@dimen/dp150"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_18sp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp2"
+                        android:drawableLeft="@drawable/drawable_bronze"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txt_3rd_win"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:textColor="@color/white"
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/dimen_18sp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginLeft="@dimen/dp50"
+                        android:layout_height="wrap_content"/>
+                 </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+            <TextView
+                android:text="Participants:"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorgreen"
+                android:textSize="@dimen/dimen_18sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/lnrParticipants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d_background_border_white"
+                    android:orientation="vertical"
+                    >
+                    <include
+                        layout="@layout/view_participant_list"/>
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/dialog_toolbar"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    style="@style/dialogParentStyle">
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        style="@style/popUpBoxbg"-->
+<!--        android:layout_alignLeft="@id/lnr_box"-->
+<!--        android:layout_alignRight="@id/lnr_box"-->
+<!--        android:layout_alignTop="@id/lnr_box"-->
+<!--        android:layout_alignBottom="@id/lnr_box"-->
+<!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnr_box"
+        android:background="@drawable/d_pop_setting"
+        android:layout_marginHorizontal="25dp"
+        android:padding="20dp"
+        >
+
+
+            <LinearLayout
+                android:id="@+id/lnrRuleslist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp15"
+                android:paddingBottom="@dimen/dp20"
+                >
+
+                <TextView
+                    android:id="@+id/how_to"
+                    android:textColor="@color/white"
+                    android:text="@string/how_to_play"
+                    android:textAlignment="center"
+                    android:textSize="0dp"
+                    android:layout_width="match_parent"
+                    android:paddingTop="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_below="@+id/how_to"
+                    android:textColor="@color/white"
+                    android:text="• The 7 Up 7 Down table has a felt with the three betting options written on it.\n
+• The three options include less than 7, greater than 7, and equal to 7.\n
+• Each player starts the game by placing their chips on one or two of these options before the two dice are rolled.\n
+• Numbers below 7 (1,2,3,4,5,6) are known as Seven Down. If you win by calling a Seven Down, the payout is 1x the betting amount.\n
+• Numbers above 7 (8,9,10,11,12) are known as Seven Up. If you win by calling a Seven Up, the payout is 1x the betting amount.\n
+• The number 7 is called a Lucky Seven. If you win by calling a Lucky Seven bet, the payout is 4x the betting amount.\n
+• If the final position of the two dice doesn’t indicate a clear result, either by landing on top of each other or by leaning against the jar, the pair of dice are rolled again."
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:textSize="@dimen/payu_dimen_14sp"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/ic_dt_rule1"
+                    />
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/dialog_toolbar"/>
+
+
+
+</RelativeLayout>

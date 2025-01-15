@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "935091282929",
+    "project_id": "andharbahar-5c7c3",
+    "storage_bucket": "andharbahar-5c7c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935091282929:android:68a00c2f68ea0b72dada50",
+        "android_client_info": {
+          "package_name": "com.gamegards.andharbaharpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935091282929-712tfcfhcjetqd36uhsgjfs25pmutvrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgbA0U-iBMqS9RO1GNFz4EeidJgY3gM-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935091282929-712tfcfhcjetqd36uhsgjfs25pmutvrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935091282929:android:b7010b0e910c14e1dada50",
+        "android_client_info": {
+          "package_name": "com.metaards.metagames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935091282929-712tfcfhcjetqd36uhsgjfs25pmutvrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgbA0U-iBMqS9RO1GNFz4EeidJgY3gM-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935091282929-712tfcfhcjetqd36uhsgjfs25pmutvrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

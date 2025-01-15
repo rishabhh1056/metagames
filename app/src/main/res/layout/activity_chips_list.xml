@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialogParentStyle"
+    tools:context=".Activity.BuyChipsList">
+
+    <RelativeLayout
+        android:id="@+id/rlt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/popUpBoxbg"
+            android:orientation="vertical"
+            android:id="@+id/lnr_box"
+            android:layout_marginTop="@dimen/pop_up_top_margin"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_marginHorizontal="25dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginVertical="42dp"
+                android:layout_marginHorizontal="35dp"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtnotfound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Data no available!"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlt_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateDrawable="@drawable/cpb_3"
+                    android:indeterminateDuration="4000"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <include
+            layout="@layout/dialog_toolbar"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_no_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:tint="@color/colorAccent"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colordullwhite"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="No Winning History is Available"/>
+    </LinearLayout>
+</RelativeLayout>

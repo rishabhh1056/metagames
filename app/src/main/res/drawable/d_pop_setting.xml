@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    -->
+    <!--    android:left="25dp"-->
+    <!--    android:right="25dp"-->
+
+<!--    android:top="15dp"-->
+<!--    android:bottom="25dp"-->
+
+    <item>
+
+                <bitmap
+                    android:src="@drawable/pop_bg"/>
+
+<!--        <shape-->
+<!--            android:shape="rectangle">-->
+
+<!--            <solid-->
+<!--                android:color="@color/pop_setting_bg"/>-->
+
+<!--            <corners-->
+<!--                android:radius="10dp"-->
+<!--                />-->
+
+<!--            <stroke-->
+<!--                android:width="2dp"-->
+<!--                android:color="@color/pop_setting_stroke"-->
+<!--                />-->
+
+<!--        </shape>-->
+
+
+    </item>
+
+</layer-list>

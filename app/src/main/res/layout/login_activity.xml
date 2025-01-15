@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account.LoginScreen"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/login_bg" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgBackgroundlogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout
+                android:id="@+id/iv_icons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rltLoginContainer"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="70dp"
+                    android:src="@drawable/app_icon"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/cb_termscondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="15dp"
+                    android:text="@string/terms_and_conditions"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rltLoginContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp50"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/lnr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:scrollbars="none"
+                        android:visibility="visible">
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignLeft="@id/lnrLoginContainer"
+                                android:layout_alignTop="@id/lnrLoginContainer"
+                                android:layout_alignRight="@id/lnrLoginContainer"
+                                android:layout_alignBottom="@id/lnrLoginContainer"
+                                android:scaleType="fitXY"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/lnrLoginContainer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                >
+                                <ViewFlipper
+                                    android:id="@+id/loginFlipper"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible"
+                                    android:layout_gravity="right"
+                                    >
+                                    <include
+                                        layout="@layout/view_login_sendotp"/>
+                                    <include
+                                        layout="@layout/view_login_enter_otp"/>
+
+                                </ViewFlipper>
+
+                                <ViewFlipper
+                                    android:id="@+id/Signupviewfliper"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    >
+
+                                    <include
+                                        layout="@layout/view_login_signup_sendotp"/>
+                                    <include
+                                        layout="@layout/view_login_enter_otp"/>
+                                </ViewFlipper>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </ScrollView>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/bottom_reffercode" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

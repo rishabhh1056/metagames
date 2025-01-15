@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/lnrtypegame"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp90"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp70"
+        android:background="@drawable/ic_dt_bottom_strip"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <!--  Player 1 START -->
+        <!--  <RelativeLayout
+              android:id="@+id/rltplayer1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/dimen_7dp">
+  -->
+
+        <!--<ImageView
+            android:id="@+id/ivUserCardsGuid"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_user_guid" />
+
+        &lt;!&ndash;player life&ndash;&gt;
+        <LinearLayout
+            android:layout_alignParentEnd="@+id/rltplayer1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="@+id/ivUserCardsGuid"
+            android:layout_toRightOf="@+id/ivUserCardsGuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivFirstlifecheck"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_uncheckbox" />
+
+                <TextView
+                    style="@style/ShadowWhiteTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="First Life"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivSeconlifecheck"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_uncheckbox" />
+
+                <TextView
+                    style="@style/ShadowWhiteTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Second Life"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+
+        <!-- <RelativeLayout
+             android:layout_alignParentTop="true"
+             android:layout_alignParentBottom="true"
+             android:layout_centerHorizontal="true"
+             android:id="@+id/rltplayer1"
+             android:layout_width="wrap_content"
+             android:layout_height="90dp"
+             android:layout_alignParentStart="@+id/ivUserCardsGuid"
+
+
+             android:layout_marginBottom="5dp">
+
+             <RelativeLayout
+                 android:id="@+id/rltplayer1growing"
+                 android:layout_width="90dp"
+                 android:layout_height="80dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_centerHorizontal="true"
+                 android:alpha="0.1"
+                 android:background="#FFC107"
+                 android:visibility="gone" />
+
+             &lt;!&ndash; Player 1&ndash;&gt;
+             &lt;!&ndash; player 1st circle source code &ndash;&gt;
+             <RelativeLayout
+                 android:id="@+id/rltcirclproimage1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+
+                 <ImageView
+                     android:id="@+id/imgpl1glow"
+                     android:layout_width="90dp"
+                     android:layout_height="90dp"
+                     android:layout_centerInParent="true"
+                     android:src="@drawable/glow_circle"
+                     android:visibility="gone" />
+
+                 <RelativeLayout
+                     android:layout_width="90dp"
+                     android:layout_height="90dp"
+                     android:background="@drawable/user_bg_circle" />
+
+                 <de.hdodenhof.circleimageview.CircleImageView
+                     android:id="@+id/imgpl1circle"
+                     android:layout_width="71dp"
+                     android:layout_height="73dp"
+                     android:layout_centerInParent="true"
+                     android:src="@drawable/avatar"
+                     android:visibility="visible" />
+
+                 <ProgressBar
+                     android:id="@+id/circularProgressbar1"
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="73dp"
+                     android:layout_height="match_parent"
+                     android:layout_centerHorizontal="true"
+                     android:indeterminate="false"
+                     android:max="85"
+                     android:progress="50"
+                     android:progressDrawable="@drawable/circular"
+                     android:secondaryProgress="100"
+                     android:visibility="visible" />
+             </RelativeLayout>
+
+             <TextView
+                 android:id="@+id/txtwinner1"
+                 android:layout_width="55dp"
+                 android:layout_height="55dp"
+                 android:layout_centerInParent="true"
+                 android:background="@drawable/black_transparent"
+                 android:gravity="center"
+                 android:text="Winner"
+                 android:textColor="#ffffff"
+                 android:textSize="12sp"
+                 android:visibility="gone" />
+
+             &lt;!&ndash;player scoore &ndash;&gt;
+             <RelativeLayout
+                 android:layout_toRightOf="@+id/rltcirclproimage1"
+                 android:layout_marginBottom="@dimen/dp12"
+                 android:layout_width="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_height="wrap_content">
+
+                 <LinearLayout
+                     android:id="@+id/lnruserdetails1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="@dimen/dp20"
+                     android:layout_alignParentBottom="true"
+                     android:layout_centerHorizontal="true"
+                     android:background="@drawable/white_lable_big"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal">
+
+                     <TextView
+                         android:id="@+id/txtPlay1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:ellipsize="end"
+                         android:maxLength="10"
+                         android:singleLine="true"
+                         android:text=""
+                         android:textColor="@color/coloryellow"
+                         android:textSize="12sp"
+                         android:textStyle="bold"
+                         android:visibility="gone" />
+
+                     <TextView
+                         android:id="@+id/txtPlay1wallet"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="15dp"
+                         android:layout_marginRight="2dp"
+                         android:text="0"
+                         android:textColor="@color/black"
+                         android:textSize="14dp"
+                         android:textStyle="bold" />
+                 </LinearLayout>
+
+                 <ImageView
+                     android:id="@+id/iv_add"
+                     android:layout_width="45dp"
+                     android:layout_height="19dp"
+                     android:layout_marginBottom="@dimen/dp20"
+                     android:layout_alignParentBottom="true"
+                     android:layout_centerHorizontal="true"
+                     android:layout_gravity="center_vertical"
+                     android:layout_marginLeft="-20dp"
+                     android:layout_toRightOf="@+id/lnruserdetails1"
+                     android:background="@drawable/iv_jackpot_add"
+                     android:onClick="openBuyChipsActivity" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/rltwinnersymble1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="70dp">
+
+             <com.gamegards.letsplaycard.Utils.GifImageView
+                 android:id="@+id/imgpl1winner"
+                 android:layout_width="120dp"
+                 android:layout_height="80dp"
+                 android:layout_centerHorizontal="true"
+                 android:src="@drawable/giphy"
+                 android:visibility="visible" />
+
+             <com.gamegards.letsplaycard.Utils.GifImageView
+                 android:id="@+id/imgpl1winnerstar"
+                 android:layout_width="120dp"
+                 android:layout_height="80dp"
+                 android:layout_centerHorizontal="true"
+                 android:src="@drawable/star"
+                 android:visibility="visible"  />
+
+
+         </RelativeLayout>
+         &lt;!&ndash;<RelativeLayout
+             android:id="@+id/rltcirclproimage1"
+             android:layout_width="@dimen/dp60"
+             android:layout_height="wrap_content">
+             <de.hdodenhof.circleimageview.CircleImageView
+                 android:id="@+id/imgpl1circle"
+                 android:layout_width="@dimen/dp60"
+                 android:layout_height="@dimen/dp50"
+                 android:layout_centerVertical="true"
+                 android:src="@drawable/avatar_ic" />
+
+             <TextView
+                 android:id="@+id/txtName"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/imgpl1circle"
+                 android:ellipsize="end"
+                 android:gravity="center"
+                 android:shadowColor="@color/black"
+                 android:shadowDx="1"
+                 android:shadowDy="1"
+                 android:shadowRadius="3"
+                 android:text="asif"
+                 android:textAlignment="center"
+                 android:textColor="@color/white"
+                 android:textSize="13dp"
+                 android:textStyle="bold" />
+
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/ChipstoUser"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/lnrProfileDetails"
+             android:layout_toRightOf="@+id/rltcirclproimage1">
+
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_alignLeft="@id/txtBallence"
+                 android:layout_alignTop="@id/txtBallence"
+                 android:layout_alignRight="@id/txtBallence"
+                 android:layout_alignBottom="@id/txtBallence"
+                 android:scaleType="fitXY"
+                 android:src="@drawable/player_wallet" />
+
+             <TextView
+                 android:id="@+id/txtBallence"
+                 android:layout_width="wrap_content"
+                 android:layout_height="@dimen/dp40"
+                 android:layout_marginRight="2dp"
+                 android:gravity="center_vertical"
+                 android:minWidth="110dp"
+                 android:paddingLeft="@dimen/dp15"
+                 android:text="0"
+                 android:textColor="@color/gold_color"
+                 android:textSize="14dp"
+                 android:textStyle="bold" />
+
+             <ImageView
+                 android:id="@+id/iv_add"
+                 android:layout_width="45dp"
+                 android:layout_height="24dp"
+                 android:layout_centerVertical="true"
+                 android:layout_gravity="center_vertical"
+                 android:layout_marginLeft="-20dp"
+                 android:layout_toRightOf="@+id/txtBallence"
+                 android:background="@drawable/gold_add_btn"
+                 android:onClick="openBuyChipsActivity" />
+         </RelativeLayout>
+
+         <LinearLayout
+             android:id="@+id/lnrProfileDetails"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="10dp"
+             android:layout_toRightOf="@+id/rltcirclproimage1"
+             android:orientation="vertical">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="end"
+                 android:gravity="center"
+                 android:shadowColor="@color/black"
+                 android:shadowDx="1"
+                 android:shadowDy="1"
+                 android:shadowRadius="3"
+                 android:text="asif"
+                 android:textColor="@color/white"
+                 android:textSize="13dp"
+                 android:textStyle="bold"
+                 android:visibility="invisible" />
+
+             <TextView
+                 android:id="@+id/txt_gameId"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="end"
+                 android:gravity="center"
+                 android:shadowColor="@color/black"
+                 android:shadowDx="1"
+                 android:shadowDy="1"
+                 android:shadowRadius="3"
+                 android:text="asif"
+                 android:textSize="13dp"
+                 android:textStyle="bold"
+                 android:visibility="gone" />
+         </LinearLayout>&ndash;&gt;
+     </RelativeLayout>-->
+        <!--  Player 1 END -->
+        <!--<HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/rltplayer1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/lnrfollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                &lt;!&ndash;                    <include layout="@layout/cat_txtview" />&ndash;&gt;
+            </LinearLayout>
+        </HorizontalScrollView>-->
+
+        <!--timer-->
+        <!-- <TextView
+             android:id="@+id/tvStartTimer"
+             style="@style/ShadowGoldTextview"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/dp130"
+             android:layout_marginTop="20dp"
+             android:layout_toRightOf="@+id/rltplayer1"
+             android:shadowColor="@color/black"
+             android:shadowDx="1"
+             android:shadowDy="1"
+             android:shadowRadius="3"
+             android:text="30s"
+             android:textColor="@color/white"
+             android:textSize="@dimen/jackpot_heading_size"
+             android:visibility="gone" />
+
+         <TextView
+             android:id="@+id/txtcountdown"
+             style="@style/ShadowGoldTextview"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/dp120"
+             android:layout_marginTop="20dp"
+             android:layout_toRightOf="@+id/tvStartTimer"
+             android:shadowColor="@color/black"
+             android:shadowDx="1"
+             android:shadowDy="1"
+             android:shadowRadius="3"
+             android:text=""
+             android:textColor="@color/white"
+             android:textSize="@dimen/jackpot_heading_size" />-->
+
+        <!--<LinearLayout
+            android:id="@+id/lnrAmountview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgpl1minus"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/minusnew"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignLeft="@id/btGameAmount"
+                            android:layout_alignTop="@id/btGameAmount"
+                            android:layout_alignRight="@id/btGameAmount"
+                            android:layout_alignBottom="@id/btGameAmount"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/textboxchal" />
+
+                        <Button
+                            android:id="@+id/btGameAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:text="50"
+                            android:textColor="#00BAB0"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imgpl1plus"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/addnew"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/lnrButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnconfirm"
+                        android:layout_width="@dimen/ab_button_width"
+                        android:layout_height="35dp"
+                        android:background="@drawable/yellow_dark_button"
+                        android:onClick="confirmBooking"
+                        android:padding="5dp"
+                        android:text="CONFIRM"
+                        android:textSize="12dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCANCEL"
+                    android:layout_width="@dimen/ab_button_width"
+                    android:layout_height="35dp"
+                    android:layout_above="@+id/lnrtypegame"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/blue_button"
+                    android:onClick="cancelBooking"
+                    android:text="CANCEL"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>-->
+    </RelativeLayout>
+
+</RelativeLayout>

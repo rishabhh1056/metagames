@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/dialogParentStyle"
+    android:id="@+id/swiperefresh"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/lnr_box"
+            style="@style/popUpBoxbg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="@dimen/pop_up_top_margin"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/dp10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/purple_top"
+                            android:elevation="2dp"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lnrSerial"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp5"
+                                android:layout_weight="0.4">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:text="Serial"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:text="Name"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                >
+
+                                <TextView
+                                    android:id="@+id/tvEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Email"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/lnrReferalid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                >
+
+                                <TextView
+                                    android:id="@+id/tvReferalid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Referral"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/lnrCash"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.1">
+
+                                <TextView
+                                    android:id="@+id/tvCash"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:text="Coins"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrcount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.1">
+
+                                <TextView
+                                    android:id="@+id/tvcount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:text="Count"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrGame"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tvGame"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:text="Added Date"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrStatus"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/tvStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:text="Status"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rec_winning"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/rv_tabel_top" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/txtnotfound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Data no available!"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlt_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:indeterminateDrawable="@drawable/cpb_3"
+                    android:indeterminateDuration="4000"
+                    android:visibility="visible" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="25dp">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/dialog_toolbar"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

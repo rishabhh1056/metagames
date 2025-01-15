@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeChip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp">
+
+    <RelativeLayout
+        android:id="@+id/rltmainview"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/payu_dimen_45dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="1.7dp"
+        android:layout_marginRight="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_8dp">
+
+        <TextView
+            android:id="@+id/txt_cat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:background="@drawable/join_zero_update"
+            android:textColor="@color/white"
+            android:textSize="0dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtWinnerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rltAddedChpisview"
+            android:layout_width="@dimen/dt_putchips_size"
+            android:layout_height="@dimen/dt_putchips_size"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:background="@drawable/ic_dt_chips"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvDragonCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:padding="3dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

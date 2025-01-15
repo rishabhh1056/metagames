@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardCornerRadius="30dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:background="@drawable/bg_gredient"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter OTP"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    app:fontFilePath="@string/Helvetica_Bold_Extra"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgclose"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_close_new"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_OTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:hint="Enter Your OTP"
+                android:textColorHint="@color/hint_color"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginEnd="@dimen/dp15"
+                android:gravity="top"
+                android:padding="10dp"
+                android:background="@drawable/bg_edit_box"
+                android:inputType="number"
+                android:singleLine="false"
+                android:elevation="5dp"
+                android:textColor="@color/white"
+                android:imeOptions="flagNoExtractUi"
+                />
+
+            <TextView
+                android:id="@+id/tv_edit_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Phone No."
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="@dimen/dp20"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/dimen_15sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                />
+
+            <EditText
+                android:id="@+id/edit_phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:hint="Enter Your Phone"
+                android:textColorHint="@color/gray"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginEnd="@dimen/dp15"
+                android:gravity="top"
+                android:padding="10dp"
+                android:maxLength="10"
+                android:visibility="gone"
+                android:background="@drawable/bg_edit_box"
+                android:inputType="number"
+                android:singleLine="false"
+                android:elevation="5dp"
+                android:textColor="@color/black"
+                android:imeOptions="flagNoExtractUi"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imglogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/new_yellow"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Submit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:fontFilePath="@string/Helvetica_Bold_Extra" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/colorredbutton"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Cancel"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            app:fontFilePath="@string/Helvetica_Bold_Extra" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

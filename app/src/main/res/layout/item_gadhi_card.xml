@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/dp10"
+    >
+
+    <ImageView
+        android:id="@+id/ivSelected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/d_rectangle_box_yellow"
+        android:layout_alignRight="@id/imgcard"
+        android:layout_alignLeft="@id/imgcard"
+        android:layout_alignTop="@id/imgcard"
+        android:layout_alignBottom="@id/imgcard"
+        android:visibility="gone"
+        />
+
+
+    <ImageView
+        android:id="@+id/imgcard"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_hieght"
+        android:src="@drawable/backside_card"
+        android:elevation="10dp"
+        android:background="@drawable/shadow"
+        android:layout_marginRight="-12dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_jokercard"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_hieght"
+        android:layout_marginRight="-12dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_joker_card"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgalphacard"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_hieght"
+        android:elevation="10dp"
+        android:src="@drawable/highlighted_cards"
+        android:visibility="gone"
+        android:layout_marginRight="-12dp"
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.first_player_games.LocalGame.VsComputer"
+    android:background="#404040"
+    android:clipToPadding="false">
+    <EditText
+        android:id="@+id/cheatview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:text="6"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp"
+        />
+
+    <ImageView
+        android:id="@+id/arrow_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/yellow3" />
+
+    <LinearLayout
+        android:id="@+id/dicecontainer"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:background="@drawable/dice_background"
+        android:clipToPadding="false"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/red1"
+        >
+
+        <ImageView
+            android:id="@+id/dice"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/dice"
+            android:elevation="10dp"
+            android:src="@drawable/dots_6" />
+    </LinearLayout>
+
+    <com.first_player_games.LocalGame.DotsView
+        android:id="@+id/ludodotview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="10dp"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/ludoboardimageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/new_board_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:translationY="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/ludoboardimageview"
+        android:paddingTop="10dp"
+        android:clipToPadding="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/one_side_round_red"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:elevation="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+
+                android:textStyle="bold"
+                android:fontFamily="@font/oswald"
+                android:text="P1"
+                android:textSize="20dp"
+
+                android:alpha="0.6"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/one_side_round_yellow"
+            android:gravity="center_vertical"
+            android:paddingRight="5dp"
+            android:elevation="5dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+
+                android:textStyle="bold"
+                android:fontFamily="@font/oswald"
+                android:text="P2"
+                android:textSize="20dp"
+                android:gravity="right"
+                android:alpha="0.6"
+                android:paddingRight="2dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        android:translationY="-1dp"
+        app:layout_constraintTop_toBottomOf="@+id/ludoboardimageview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/one_side_round_green"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+
+                android:textStyle="bold"
+                android:fontFamily="@font/oswald"
+                android:text="P3"
+                android:textSize="20dp"
+
+                android:alpha="0.6"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/one_side_round_blue"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+
+                android:textStyle="bold"
+                android:fontFamily="@font/oswald"
+                android:text="P4"
+                android:textSize="20dp"
+                android:gravity="right"
+                android:alpha="0.6"
+                android:paddingRight="2dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

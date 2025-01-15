@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/dialogParentStyle"
+    android:id="@+id/swiperefresh"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/popUpBoxbg"            android:orientation="vertical"
+            android:id="@+id/lnr_box"
+            android:layout_marginTop="@dimen/pop_up_top_margin"
+            android:layout_below="@+id/rtl_toolbar"
+            android:layout_marginHorizontal="25dp"
+            android:padding="10dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginTop="35dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:background="@drawable/purple_top"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:elevation="2dp"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/lnrSerial"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="@dimen/dp5"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Serial"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrDate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Date"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrGame"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                >
+
+                                <TextView
+                                    android:id="@+id/tvGame"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Game"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrCash"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.1"
+                                >
+
+                                <TextView
+                                    android:id="@+id/tvCash"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Cash"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnrStatus"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                >
+
+                                <TextView
+                                    android:id="@+id/tvStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="Status"
+                                    android:textColor="@color/white"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    app:fontFilePath="@string/Helvetica_Bold"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rec_winning"
+                            android:layout_marginTop="@dimen/rv_tabel_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtnotfound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Data no available!"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rlt_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:indeterminateDrawable="@drawable/cpb_3"
+                    android:indeterminateDuration="4000"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/dialog_toolbar"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

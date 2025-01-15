@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:gravity="center"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="._LuckJackpot.LuckJackPot_A">
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/dimen_30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-10dp"
+        android:layout_marginStart="-640dp"
+        android:onClick="openGameRules"
+        android:src="@drawable/ic_jackpot_info"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgback"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    <!--<ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@drawable/iv_jackpot_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+
+    <LinearLayout
+        android:id="@+id/lnrOnlineUser"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circle"
+        android:elevation="@dimen/dp10"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/user_photo" />
+
+        <TextView
+            android:id="@+id/tvonlineuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rtlGameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp60"
+                android:layout_marginRight="@dimen/dp30"
+                android:orientation="vertical"
+                app:layout_constraintRight_toRightOf="parent">
+                <!-- <include
+                    layout="@layout/view_carroulate_topview" />-->
+                <TextView
+                    android:id="@+id/txtGameBets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#EEC283"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <include
+                    layout="@layout/updated_view_animal_roullete_topview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true" />
+
+
+                <!--   <include
+                      android:layout_gravity="center"
+                      layout="@layout/view_carroulate_betsview"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="-180dp"/>
+             -->
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp">
+            <!--<RelativeLayout
+                android:id="@+id/timer_group"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_above="@+id/lnrcarsList"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp20">
+
+                <ImageView
+                    android:id="@+id/watch_timer"
+                    android:layout_width="@dimen/dp85"
+                    android:layout_height="@dimen/dp85"
+                    android:src="@drawable/watch_timer" />
+
+                <TextView
+                    android:id="@+id/tvStartTimer"
+                    style="@style/ShadowGoldTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentTop="@+id/watch_timer"
+                    android:layout_alignParentStart="@+id/watch_timer"
+                    android:layout_alignEnd="@+id/watch_timer"
+                    android:layout_alignBottom="@+id/watch_timer"
+
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="3"
+                    android:text="30s"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/jackpot_heading_size" />
+
+                <TextView
+                    android:id="@+id/txtcountdown"
+                    style="@style/ShadowGoldTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/watch_timer"
+                    android:layout_alignBottom="@+id/watch_timer"
+                    android:layout_marginTop="@dimen/dp200"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_toRightOf="@+id/tvStartTimer"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/jackpot_heading_size" />
+            </RelativeLayout>-->
+            <RelativeLayout
+                android:id="@+id/lnrcarsList"
+                android:layout_width="60dp"
+                android:layout_height="180dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp90"
+                android:gravity="center_vertical">
+
+                <ScrollView
+                    android:id="@+id/horizontal"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_carroulate_list_bg"
+                    android:fillViewport="true"
+                    android:padding="@dimen/dp10"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/lnrcancelist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/item_carroulate_lastwin" />
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--<LinearLayout
+            android:id="@+id/lnrcarsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp3"
+            android:paddingHorizontal="@dimen/dp50"
+            android:gravity="center">
+            <ScrollView
+                android:id="@+id/horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/lnrcancelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/item_carroulate_lastwin" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+-->
+        <include
+            layout="@layout/update_view_gameuser_bottom_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sticker_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rltwinnersymble1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ivWine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/winner_patti"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:gravity="center"
+                android:text="You Win"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                app:layout_constraintBottom_toBottomOf="@+id/ivWine"
+                app:layout_constraintEnd_toEndOf="@+id/ivWine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivWine" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/rtllosesymble1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/ivlose"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_game_over"
+                android:tint="@color/red"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/tvlose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="210dp"
+                android:gravity="center"
+                android:text="You lose"
+                android:textColor="@color/BrownColor"
+                android:textSize="20sp"
+                app:fontFilePath="@string/Helvetica_Bold_Extra"
+                app:layout_constraintBottom_toBottomOf="@+id/ivlose"
+                app:layout_constraintEnd_toEndOf="@+id/ivlose"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivlose" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/watch"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/txtcountdown"
+            style="@style/ShadowWhiteTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp10"
+            android:gravity="center"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:textColor="#EEC283"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvStartTimerNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="5dp"
+            android:shadowColor="#5d5534"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:text="00.0"
+            android:textColor="#5d5534"
+            android:textSize="@dimen/dp20"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2">
+
+        <TextView
+            android:id="@+id/txtGameRunning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#EEC283"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtGameBets"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:gravity="center"-->
+<!--            android:text=""-->
+<!--            android:textColor="#EEC283"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:visibility="gone" />-->
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rltOngoinGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="#90000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/ShadowGoldTextviewNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Please wait for Next Round"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

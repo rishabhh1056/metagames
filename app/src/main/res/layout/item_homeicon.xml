@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rltTeenpatti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivHomegamecard"
+            android:layout_width="140dp"
+            android:src="@drawable/home_rummy_deal"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/home_card_width"
+            android:layout_height="@dimen/home_card_height"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.metagards.metagames.CustomView.ShiningView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-70dp"
+                android:rotation="40" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

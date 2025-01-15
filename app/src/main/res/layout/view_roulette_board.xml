@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="._Roulette.RouletteActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="@dimen/dimen_15dp">
+
+        <RelativeLayout
+            android:id="@+id/betOnZero"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/d_trans_ractangle_white"
+            >
+
+            <TextView
+                android:id="@+id/tvZeroRule"
+                style="@style/roulatteBoadPutBetTextview"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:gravity="center"
+                android:text="0"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_roulete_setamount"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/betOnFirstRow"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/d_trans_ractangle_white"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/chipOnFirstRow"
+                            android:visibility="invisible"
+                            android:layout_margin="@dimen/dp7"
+                            android:background="@drawable/ic_dt_chips" />
+
+                        <TextView
+                            style="@style/ShadowWhiteTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="2to1"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/betOnSecondRow"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/d_trans_ractangle_white"
+                        android:layout_weight="1"
+
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/chipOnSecondRow"
+                            android:visibility="invisible"
+                            android:layout_margin="@dimen/dp7"
+                            android:background="@drawable/ic_dt_chips" />
+
+                        <TextView
+                            style="@style/ShadowWhiteTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="2to1"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/betOnThirdRow"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/d_trans_ractangle_white"
+                        android:layout_weight="1"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/chipOnThirdRow"
+                            android:visibility="invisible"
+                            android:layout_margin="@dimen/dp7"
+                            android:background="@drawable/ic_dt_chips" />
+
+                        <TextView
+                            style="@style/ShadowWhiteTextview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="2to1"
+                            android:textAllCaps="false"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp30"
+                android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:id="@+id/betOn1to12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp7"
+                        android:id="@+id/chipOn1to12"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="1ST 12"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/betOn2to12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp7"
+                        android:id="@+id/chipOn2to12"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="2ND 12"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/betOn3to12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp7"
+                        android:id="@+id/chipOn3to12"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="3RD 12"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp30"
+                android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:id="@+id/betOn1to18"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp7"
+                        android:id="@+id/chipOn1to18"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="1 TO 18"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/betOnEven"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:id="@+id/chipOnEven"
+                        android:layout_margin="@dimen/dp7"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="EVEN"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/betOnRed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dp3"
+                    >
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:layout_width="@dimen/dp20"-->
+                    <!--                        android:layout_height="@dimen/dp20"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:layout_margin="@dimen/dp7"-->
+                    <!--                        android:background="@drawable/ic_dt_chips" />-->
+
+                    <ImageView
+                        android:id="@+id/redcard"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/diamond_red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/betOnBlack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:id="@+id/blackcard"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/diamond_black" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/betOnOdd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp7"
+                        android:id="@+id/chipOnOdd"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="ODD"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/betOn19to36"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/d_trans_ractangle_white"
+                    android:layout_weight="1"
+                    >
+
+
+                    <TextView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/dp7"
+                        android:id="@+id/chipOn19to36"
+                        android:visibility="invisible"
+                        android:background="@drawable/ic_dt_chips" />
+
+                    <TextView
+                        style="@style/roulatteBoadPutBetTextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="19 to 36"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

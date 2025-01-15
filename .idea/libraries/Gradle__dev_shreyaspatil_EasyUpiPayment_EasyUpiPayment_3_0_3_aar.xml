@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: dev.shreyaspatil.EasyUpiPayment:EasyUpiPayment:3.0.3@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d2aeb9d96226cfb0f83ca81bb6792aad/transformed/jetified-EasyUpiPayment-3.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d2aeb9d96226cfb0f83ca81bb6792aad/transformed/jetified-EasyUpiPayment-3.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d2aeb9d96226cfb0f83ca81bb6792aad/transformed/jetified-EasyUpiPayment-3.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.shreyaspatil.EasyUpiPayment/EasyUpiPayment/3.0.3/b9d91f4c21c11f04018b8e9c6892efdb0c4990b4/EasyUpiPayment-3.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.shreyaspatil.EasyUpiPayment/EasyUpiPayment/3.0.3/3c27301636472c84181c51e4f4d6f572bf396133/EasyUpiPayment-3.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

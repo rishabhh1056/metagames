@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: in.payu:payu-checkout-pro-ui:1.8.2@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4029b4abbb822b83cbbbc7b826afd89e/transformed/jetified-payu-checkout-pro-ui-1.8.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4029b4abbb822b83cbbbc7b826afd89e/transformed/jetified-payu-checkout-pro-ui-1.8.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4029b4abbb822b83cbbbc7b826afd89e/transformed/jetified-payu-checkout-pro-ui-1.8.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

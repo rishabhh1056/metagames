@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <ImageView
+        android:id="@+id/game_won_trophy"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/trophy_red"
+        android:adjustViewBounds="true" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationY="-10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/button_purple"
+            android:adjustViewBounds="true"
+            />
+        <TextView
+            android:id="@+id/gamewon_playername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red Won"
+            android:layout_centerInParent="true"
+            android:textSize="30dp"
+            android:fontFamily="@font/oswald"
+            android:gravity="center"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:id="@+id/localgamewonrestart"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/restart_icon"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/round_button"
+            android:paddingBottom="6dp"
+            android:paddingHorizontal="2dp" />
+        <ImageView
+            android:id="@+id/localgamewoncancel"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/close_icon"
+            android:adjustViewBounds="true"
+            android:background="@drawable/round_button"
+            android:paddingBottom="6dp"
+            android:paddingHorizontal="2dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
