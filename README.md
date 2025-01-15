@@ -19,7 +19,7 @@ Frontend: The app is developed using Android Native for better performance and p
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/yourusername/meta-game.git
+git clone https://github.com/rishabhh1056/metagames.git
 Open the project in Android Studio.
 Sync the Gradle files.
 Build and run the application on your Android device or emulator.
